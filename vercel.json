@@ -4,6 +4,9 @@
   "framework": null,
   "cleanUrls": true,
   "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+    {
+      "source": "/((?!images/|assets/|__manus__/).*)",
+      "destination": "/index.html"
+    }
   ]
 }
