@@ -81,10 +81,10 @@ const primaryVideos = [
 ];
 
 const reviewImages = [
-  { src: "./images/inus-review-slide-1.jpg", alt: "실제 고객 만족후기 캡처 1" },
-  { src: "./images/inus-review-slide-2.jpg", alt: "실제 고객 만족후기 캡처 2" },
-  { src: "./images/inus-review-slide-3.jpg", alt: "실제 고객 만족후기 캡처 3" },
-  { src: "./images/inus-review-slide-4.jpg", alt: "실제 고객 만족후기 캡처 4" },
+  { src: "/images/inus-review-slide-1.jpg", alt: "실제 고객 만족후기 캡처 1" },
+  { src: "/images/inus-review-slide-2.jpg", alt: "실제 고객 만족후기 캡처 2" },
+  { src: "/images/inus-review-slide-3.jpg", alt: "실제 고객 만족후기 캡처 3" },
+  { src: "/images/inus-review-slide-4.jpg", alt: "실제 고객 만족후기 캡처 4" },
 ];
 
 const processSteps = [
@@ -224,7 +224,7 @@ const packages = [
 const managerProfile = {
   name: "이승현",
   title: "뮤지컬팀장",
-  image: "./images/inus-profile-face-lee-seunghyun-manager.webp",
+  image: "/images/inus-profile-face-lee-seunghyun-manager.webp",
   summary: "공연 경력과 보컬 트레이닝 경험을 바탕으로 예식 흐름, 배우 배정, 현장 큐를 조율합니다.",
 };
 
@@ -236,12 +236,12 @@ const directorHighlights = [
 ];
 
 const actorCastProfiles = [
-  { name: "나서영", role: "뮤지컬 배우", image: "./images/inus-profile-face-na-seoyoung.webp" },
-  { name: "박예인", role: "뮤지컬 배우", image: "./images/inus-profile-face-park-yein.webp" },
-  { name: "이진수", role: "뮤지컬 배우", image: "./images/inus-profile-face-lee-jinsoo.webp" },
-  { name: "정예지", role: "뮤지컬 배우", image: "./images/inus-profile-face-jung-yeji.webp" },
-  { name: "정유근", role: "뮤지컬 배우", image: "./images/inus-profile-face-jung-yoogeun.webp" },
-  { name: "주승진", role: "뮤지컬 배우", image: "./images/inus-profile-face-joo-seungjin.webp" },
+  { name: "나서영", role: "뮤지컬 배우", image: "/images/inus-profile-face-na-seoyoung.webp" },
+  { name: "박예인", role: "뮤지컬 배우", image: "/images/inus-profile-face-park-yein.webp" },
+  { name: "이진수", role: "뮤지컬 배우", image: "/images/inus-profile-face-lee-jinsoo.webp" },
+  { name: "정예지", role: "뮤지컬 배우", image: "/images/inus-profile-face-jung-yeji.webp" },
+  { name: "정유근", role: "뮤지컬 배우", image: "/images/inus-profile-face-jung-yoogeun.webp" },
+  { name: "주승진", role: "뮤지컬 배우", image: "/images/inus-profile-face-joo-seungjin.webp" },
 ];
 
 const benefitCards = [
