@@ -28,9 +28,10 @@ Thumbs.db
 
 # 임시 파일 (작업 노트 등)
 verification-notes-*.md
-*.png
-*.jpg
+# *.png  # 이미지 파일 허용
+# *.jpg  # 이미지 파일 허용
 !images/
+!images/*
 create_hero_candidate_sheet.py
 make_focused_actor_sheet.py
 make_profile_contact_sheet.py

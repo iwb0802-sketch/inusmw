@@ -1,6 +1,6 @@
 {
-  "buildCommand": "pnpm build",
-  "outputDirectory": "dist/public",
+  "buildCommand": false,
+  "outputDirectory": ".",
   "framework": null,
   "cleanUrls": true,
   "rewrites": [
