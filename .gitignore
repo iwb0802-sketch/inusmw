@@ -1,0 +1,70 @@
+# 의존성
+node_modules/
+.pnp
+.pnp.js
+
+# 빌드 결과물 (dist는 별도 관리)
+dist/
+
+# 환경 변수
+.env
+.env.local
+.env.*.local
+
+# 로그
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# 에디터
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# 임시 파일 (작업 노트 등)
+verification-notes-*.md
+*.png
+*.jpg
+!images/
+create_hero_candidate_sheet.py
+make_focused_actor_sheet.py
+make_profile_contact_sheet.py
+scripts_extract_blog_assets.py
+profile_offset_candidates.py
+evaluation_notes.md
+final_enhancement_notes.md
+hero_image_recommendation_notes.md
+hero_image_visual_candidates_notes.md
+linebreak_fix_notes.md
+mobile_check_notes.md
+mobile_check_v2_notes.md
+rework_preview_notes.md
+rework_strategy.md
+revision_requirements.md
+visual_check_notes.md
+verification_notes*.md
+image_asset_notes*.md
+image_request_plan.md
+musical_product_extraction.md
+profile_asset_notes.md
+profile_section_verification_notes.md
+profile_image_alignment_notes.md
+profile_crop_candidate_info.txt
+review_extraction.md
+seventh_revision_verification_notes.md
+sixth_revision_*.md
+uploaded_assets.txt
+exact_restore_check.md
+repertoire_selection_15th.md
+ideas.md
+todo.md
+hero-image-candidates/
+profile_crop_candidates/
+mobile-verify-*/
+mobile-verify-12th-cdp/
+source_assets/
