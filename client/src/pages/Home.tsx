@@ -287,6 +287,42 @@ const qna = [
   },
 ];
 
+function YtThumbnail({ embedSrc, thumb, title }: { embedSrc: string; thumb: string; title: string }) {
+  const [playing, setPlaying] = useState(false);
+  if (playing) {
+    return <iframe className="h-full w-full" src={`${embedSrc}?autoplay=1`} title={title} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen />;
+  }
+  return (
+    <button type="button" className="group relative h-full w-full" onClick={() => setPlaying(true)} aria-label={`${title} 재생`}>
+      <img src={thumb} alt={title} className="h-full w-full object-cover" onError={(e) => { (e.target as HTMLImageElement).src = thumb.replace("maxresdefault", "hqdefault"); }} />
+      <div className="absolute inset-0 bg-black/30 transition group-hover:bg-black/20" />
+      <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex h-14 w-14 items-center justify-center rounded-full bg-red-600 shadow-lg transition group-hover:scale-110 sm:h-16 sm:w-16">
+        <svg className="h-6 w-6 translate-x-0.5 text-white sm:h-7 sm:w-7" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+      </span>
+    </button>
+  );
+}
+
+function NaverThumbnail({ src, title }: { src: string; title: string }) {
+  const [playing, setPlaying] = useState(false);
+  const vidMatch = src.match(/vid=([A-Z0-9]+)/);
+  const thumb = vidMatch ? `https://tv.naver.com/api/query/thumbnail?vid=${vidMatch[1]}&width=480` : null;
+  if (playing || !thumb) {
+    return <iframe className="h-full w-full" src={src} title={title} allow="autoplay; fullscreen" allowFullScreen />;
+  }
+  return (
+    <button type="button" className="group relative h-full w-full" onClick={() => setPlaying(true)} aria-label={`${title} 재생`}>
+      <div className="h-full w-full bg-[#0d0a07] flex items-center justify-center">
+        <img src={thumb} alt={title} className="h-full w-full object-cover" onError={() => setPlaying(true)} />
+      </div>
+      <div className="absolute inset-0 bg-black/30 transition group-hover:bg-black/20" />
+      <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex h-12 w-12 items-center justify-center rounded-full bg-red-600 shadow-lg transition group-hover:scale-110">
+        <svg className="h-5 w-5 translate-x-0.5 text-white" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+      </span>
+    </button>
+  );
+}
+
 function SectionTitle({
   kicker,
   title,
@@ -577,17 +613,21 @@ export default function Home() {
               compact
             />
             <div className="mt-10 grid gap-4 sm:gap-6 md:grid-cols-2">
-              {primaryVideos.map((video) => (
-                <article key={video.title} className="overflow-hidden rounded-[1.5rem] border border-[#d9b86c]/16 bg-[#14100b] shadow-2xl shadow-black/25 sm:rounded-[2rem]">
-                  <AspectRatio ratio={16 / 9}>
-                    <iframe className="h-full w-full" src={video.embed} title={video.title} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen />
-                  </AspectRatio>
-                  <div className="p-3.5 sm:p-5">
-                    <p className="text-xs font-bold tracking-[0.22em] text-[#9ed4c0]">{video.scene}</p>
-                    <h3 className="mt-2 font-serif-kr text-xl font-semibold text-[#fff4d8]">{video.title}</h3>
-                  </div>
-                </article>
-              ))}
+              {primaryVideos.map((video) => {
+                const ytId = video.embed.split("/embed/")[1]?.split("?")[0];
+                const thumb = `https://img.youtube.com/vi/${ytId}/maxresdefault.jpg`;
+                return (
+                  <article key={video.title} className="overflow-hidden rounded-[1.5rem] border border-[#d9b86c]/16 bg-[#14100b] shadow-2xl shadow-black/25 sm:rounded-[2rem]">
+                    <AspectRatio ratio={16 / 9}>
+                      <YtThumbnail embedSrc={video.embed} thumb={thumb} title={video.title} />
+                    </AspectRatio>
+                    <div className="p-3.5 sm:p-5">
+                      <p className="text-xs font-bold tracking-[0.22em] text-[#9ed4c0]">{video.scene}</p>
+                      <h3 className="mt-2 font-serif-kr text-xl font-semibold text-[#fff4d8]">{video.title}</h3>
+                    </div>
+                  </article>
+                );
+              })}
             </div>
           </div>
         </section>
@@ -764,7 +804,7 @@ export default function Home() {
               {sampleVideos.slice(0, 4).map((video) => (
                 <article key={video.title} className="overflow-hidden rounded-[1.15rem] border border-[#d9b86c]/14 bg-[#120f0b] shadow-xl shadow-black/18 sm:rounded-[1.45rem]">
                   <AspectRatio ratio={16 / 9}>
-                    <iframe className="h-full w-full" src={video.src} title={video.title} allow="autoplay; fullscreen" allowFullScreen />
+                    <NaverThumbnail src={video.src} title={video.title} />
                   </AspectRatio>
                   <div className="p-3.5">
                     <p className="text-[0.65rem] font-bold tracking-[0.18em] text-[#9ed4c0]">REPRESENTATIVE SAMPLE</p>
