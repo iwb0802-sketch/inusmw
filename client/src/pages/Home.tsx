@@ -418,13 +418,9 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-[#090806] text-[#f8edd4]">
-      <InusCardPopup />
       <header className="fixed inset-x-0 top-0 z-50 border-b border-[#d9b86c]/10 bg-[#090806]/80 backdrop-blur-xl">
         <div className="container relative flex h-[4.75rem] items-center justify-between py-4 pr-24 lg:pr-0">
           <a href="#top" className="flex min-w-0 items-center gap-2.5 sm:gap-3" aria-label="이너스뮤직 뮤지컬웨딩 홈으로 이동">
-            <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[#d9b86c]/35 bg-[#d9b86c]/10 text-[#d9b86c] sm:h-11 sm:w-11">
-              <Music2 className="h-5 w-5" />
-            </span>
             <span className="min-w-0">
               <span className="block truncate font-display text-base font-semibold tracking-[0.18em] text-[#f8edd4] sm:text-lg sm:tracking-[0.24em] md:text-xl">INUS MUSIC</span>
               <span className="block truncate text-[0.66rem] font-semibold tracking-[0.2em] text-[#9ed4c0] sm:text-xs sm:tracking-[0.28em]">MUSICAL WEDDING</span>
@@ -520,7 +516,6 @@ export default function Home() {
           <div className="container relative z-10 flex min-h-[calc(100svh-6rem)] flex-col items-center justify-center gap-8 px-5 py-16 text-center sm:gap-12 sm:py-20">
             <div className="animate-rise-in max-w-4xl">
               <div className="mx-auto inline-flex max-w-full items-center gap-2 rounded-full border border-[#d9b86c]/35 bg-[#0f0b08]/50 px-3 py-2 text-[11px] font-semibold tracking-[-0.03em] text-[#e8f5ef] backdrop-blur min-[360px]:text-xs sm:gap-3 sm:px-4 sm:text-sm">
-                <Sparkles className="h-3.5 w-3.5 shrink-0 text-[#9ed4c0] sm:h-4 sm:w-4" />
                 <span className="whitespace-nowrap">신랑신부가 주인공이 되는 프리미엄 뮤지컬웨딩</span>
               </div>
               <h1 className="mt-6 font-serif-kr text-[1.75rem] font-semibold leading-[1.15] tracking-[-0.045em] text-[#fff8e7] min-[360px]:text-3xl sm:text-4xl md:text-7xl xl:text-8xl">
