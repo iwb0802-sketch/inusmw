@@ -330,7 +330,7 @@ function SectionTitle({
   align = "left",
   compact = false,
 }: {
-  kicker: string;
+  kicker?: string;
   title: string;
   description: string;
   align?: "left" | "center";
@@ -338,7 +338,7 @@ function SectionTitle({
 }) {
   return (
     <div className={align === "center" ? "mx-auto max-w-3xl text-center" : "max-w-3xl"}>
-      <p className="section-kicker">{kicker}</p>
+      {kicker ? <p className="section-kicker">{kicker}</p> : null}
       <h2 className={`mt-4 font-serif-kr font-semibold leading-tight text-[#fff4d8] ${compact ? "text-2xl md:text-4xl" : "text-3xl md:text-5xl"}`}>
         {title.includes("\n") ? title.split("\n").map((line, index, lines) => (
           <span key={`${line}-${index}`} className="block">
@@ -572,7 +572,6 @@ export default function Home() {
             </div>
             <div>
               <SectionTitle
-                kicker="Problem & Promise"
                 title={"뮤지컬웨딩, 과하지 않을까\n걱정되셨나요?"}
                 description="과하지 않게, 필요한 순간에만 음악과 배우를 더해 예식의 품격과 감동을 더욱 선명하게 완성합니다."
                 compact
@@ -606,7 +605,6 @@ export default function Home() {
         <section id="video" className="bg-[#0d0a07] py-20 md:py-28">
           <div className="container">
             <SectionTitle
-              kicker="Featured Musical Wedding Videos"
               title="실제 장면으로 보는 뮤지컬웨딩"
               description=""
               align="center"
@@ -636,7 +634,6 @@ export default function Home() {
           <div className="absolute inset-0 opacity-15" style={{ backgroundImage: `url(${patternImage})`, backgroundSize: "560px", backgroundPosition: "center" }} />
           <div className="container relative z-10">
             <SectionTitle
-              kicker="Real Customer Reviews"
               title="실제 고객 만족후기"
               description=""
               align="center"
@@ -660,7 +657,6 @@ export default function Home() {
         <section id="composition" className="bg-[#0d0a07] py-16 md:py-22">
           <div className="container">
             <SectionTitle
-              kicker="Musical Wedding Composition"
               title="뮤지컬 기본 구성 안내"
               description=""
               align="center"
@@ -794,7 +790,6 @@ export default function Home() {
           <div className="absolute inset-0 opacity-10" style={{ backgroundImage: `url(${patternImage})`, backgroundSize: "620px", backgroundPosition: "center" }} />
           <div className="container relative z-10">
             <SectionTitle
-              kicker="Sample Performance Videos"
               title="뮤지컬 샘플영상 보기"
               description=""
               align="center"
@@ -834,7 +829,6 @@ export default function Home() {
         <section id="pricing" className="bg-[#0d0a07] py-20 md:py-28">
           <div className="container">
             <SectionTitle
-              kicker="Musical Wedding Pricing"
               title="뮤지컬웨딩 2·3·4인 가격"
               description="구성은 남녀 혼성으로 진행됩니다."
               align="center"
@@ -880,7 +874,6 @@ export default function Home() {
           <div className="absolute inset-0 opacity-10" style={{ backgroundImage: `url(${patternImage})`, backgroundSize: "560px", backgroundPosition: "center" }} />
           <div className="container relative z-10">
             <SectionTitle
-              kicker="Director & Cast"
               title="뮤지컬배우 프로필"
               description=""
               align="center"
@@ -1040,7 +1033,6 @@ export default function Home() {
         <section id="qna" className="scroll-mt-24 bg-[#0d0a07] py-20 md:py-28">
           <div className="container grid gap-12 lg:grid-cols-[0.92fr_1.08fr]">
             <SectionTitle
-              kicker="QnA"
               title="QnA"
               description="상담 전 자주 묻는 질문을 정리했습니다."
               compact
@@ -1067,7 +1059,6 @@ export default function Home() {
           <div className="absolute inset-0 opacity-10" style={{ backgroundImage: `url(${patternImage})`, backgroundSize: "620px", backgroundPosition: "center" }} />
           <div className="container relative z-10">
             <SectionTitle
-              kicker="Additional Option Services"
               title="추가 옵션 서비스"
               description=""
               align="center"
