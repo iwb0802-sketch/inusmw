@@ -8,6 +8,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Button } from "@/components/ui/button";
 import InusCardPopup from "@/components/InusCardPopup";
+import FloatingButtons from "@/components/FloatingButtons";
 import { useEffect, useRef, useState } from "react";
 import {
   Award,
@@ -23,7 +24,6 @@ import {
   MessageCircle,
   Mic2,
   Music2,
-  PlayCircle,
   ShieldCheck,
   Sparkles,
   Users,
@@ -81,10 +81,10 @@ const primaryVideos = [
 ];
 
 const reviewImages = [
-  { src: "/images/inus-review-slide-1.jpg", alt: "실제 고객 만족후기 캡처 1" },
-  { src: "/images/inus-review-slide-2.jpg", alt: "실제 고객 만족후기 캡처 2" },
-  { src: "/images/inus-review-slide-3.jpg", alt: "실제 고객 만족후기 캡처 3" },
-  { src: "/images/inus-review-slide-4.jpg", alt: "실제 고객 만족후기 캡처 4" },
+  { src: "/manus-storage/inus-review-slide-1_a350c181.jpg", alt: "실제 고객 만족후기 캡처 1" },
+  { src: "/manus-storage/inus-review-slide-2_7cbc1366.jpg", alt: "실제 고객 만족후기 캡처 2" },
+  { src: "/manus-storage/inus-review-slide-3_759482b7.jpg", alt: "실제 고객 만족후기 캡처 3" },
+  { src: "/manus-storage/inus-review-slide-4_2986db3a.jpg", alt: "실제 고객 만족후기 캡처 4" },
 ];
 
 const processSteps = [
@@ -224,7 +224,7 @@ const packages = [
 const managerProfile = {
   name: "이승현",
   title: "뮤지컬팀장",
-  image: "/images/inus-profile-face-lee-seunghyun-manager.webp",
+  image: "/manus-storage/inus-profile-face-lee-seunghyun-manager_da72f8a2.webp",
   summary: "공연 경력과 보컬 트레이닝 경험을 바탕으로 예식 흐름, 배우 배정, 현장 큐를 조율합니다.",
 };
 
@@ -236,12 +236,12 @@ const directorHighlights = [
 ];
 
 const actorCastProfiles = [
-  { name: "나서영", role: "뮤지컬 배우", image: "/images/inus-profile-face-na-seoyoung.webp" },
-  { name: "박예인", role: "뮤지컬 배우", image: "/images/inus-profile-face-park-yein.webp" },
-  { name: "이진수", role: "뮤지컬 배우", image: "/images/inus-profile-face-lee-jinsoo.webp" },
-  { name: "정예지", role: "뮤지컬 배우", image: "/images/inus-profile-face-jung-yeji.webp" },
-  { name: "정유근", role: "뮤지컬 배우", image: "/images/inus-profile-face-jung-yoogeun.webp" },
-  { name: "주승진", role: "뮤지컬 배우", image: "/images/inus-profile-face-joo-seungjin.webp" },
+  { name: "나서영", role: "뮤지컬 배우", image: "/manus-storage/inus-profile-face-na-seoyoung_fbb47f3b.webp" },
+  { name: "박예인", role: "뮤지컬 배우", image: "/manus-storage/inus-profile-face-park-yein_f5b12199.webp" },
+  { name: "이진수", role: "뮤지컬 배우", image: "/manus-storage/inus-profile-face-lee-jinsoo_63c12632.webp" },
+  { name: "정예지", role: "뮤지컬 배우", image: "/manus-storage/inus-profile-face-jung-yeji_5e5eeb61.webp" },
+  { name: "정유근", role: "뮤지컬 배우", image: "/manus-storage/inus-profile-face-jung-yoogeun_9f075416.webp" },
+  { name: "주승진", role: "뮤지컬 배우", image: "/manus-storage/inus-profile-face-joo-seungjin_be04f1b6.webp" },
 ];
 
 const benefitCards = [
@@ -359,7 +359,6 @@ function ExternalButton({ href, children, variant = "outline" }: { href: string;
 }
 
 export default function Home() {
-  const [showFloating, setShowFloating] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [menuPulse, setMenuPulse] = useState(true);
   const [serviceDropdownOpen, setServiceDropdownOpen] = useState(false);
@@ -380,23 +379,6 @@ export default function Home() {
     return () => clearTimeout(timer);
   }, []);
   const [castProfilesOpen, setCastProfilesOpen] = useState(false);
-
-  useEffect(() => {
-    const updateFloatingVisibility = () => {
-      const heroSection = document.querySelector("#top > section:first-child");
-      const heroHeight = heroSection instanceof HTMLElement ? heroSection.offsetHeight : window.innerHeight;
-      setShowFloating(window.scrollY > heroHeight * 0.72);
-    };
-
-    updateFloatingVisibility();
-    window.addEventListener("scroll", updateFloatingVisibility, { passive: true });
-    window.addEventListener("resize", updateFloatingVisibility);
-
-    return () => {
-      window.removeEventListener("scroll", updateFloatingVisibility);
-      window.removeEventListener("resize", updateFloatingVisibility);
-    };
-  }, []);
 
   return (
     <div className="min-h-screen bg-[#090806] text-[#f8edd4]">
@@ -1115,30 +1097,7 @@ export default function Home() {
           </div>
         </section>
 
-        {showFloating ? (
-          <div className="pointer-events-none fixed inset-x-0 bottom-5 z-50 flex animate-rise-in items-end justify-between px-4 sm:bottom-6 sm:px-6">
-            <a
-              href={videoArchiveUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="pointer-events-auto inline-flex items-center gap-2 rounded-full border border-[#8adfce]/55 bg-[linear-gradient(135deg,rgba(10,42,36,0.94),rgba(138,223,206,0.22),rgba(217,184,108,0.14))] px-4 py-3 text-xs font-extrabold text-[#d9fff5] shadow-[0_16px_42px_rgba(0,0,0,0.35),0_0_26px_rgba(138,223,206,0.13)] backdrop-blur-xl transition hover:-translate-y-0.5 hover:border-[#d9b86c]/58 hover:bg-[#10231f] hover:text-white sm:px-5 sm:text-sm"
-              aria-label="이너스뮤직 뮤지컬웨딩 영상 아카이브 새 창에서 보기"
-            >
-              <PlayCircle className="h-5 w-5 text-[#8adfce]" />
-              영상보기
-            </a>
-            <a
-              href={kakaoChatUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="pointer-events-auto inline-flex items-center gap-2 rounded-full bg-[#fee500] px-4 py-3 text-xs font-extrabold text-[#3c1e1e] shadow-[0_16px_42px_rgba(0,0,0,0.35)] transition hover:-translate-y-0.5 hover:brightness-110 sm:px-5 sm:text-sm"
-              aria-label="카카오톡 상담 새 창에서 시작하기"
-            >
-              <MessageCircle className="h-5 w-5" />
-              카카오톡 상담
-            </a>
-          </div>
-        ) : null}
+        <FloatingButtons />
       </main>
 
       <footer className="border-t border-[#d9b86c]/10 bg-[#070604] py-10">
