@@ -30,8 +30,7 @@ import {
   X,
 } from "lucide-react";
 
-const heroImage =
-  "https://d2xsxph8kpxj0f.cloudfront.net/310519663600657495/QvBn3XoVSZ7dCLckkzSdvB/hero_candidate_A-dedcMMEv2BSroRSaouSBje.webp";
+const heroImage = "/images/hero-performance.jpg";
 const microphoneImage =
   "https://d2xsxph8kpxj0f.cloudfront.net/310519663600657495/QvBn3XoVSZ7dCLckkzSdvB/inus_gold_microphone_detail-KjPgk33rsvS9qAceb4JQnJ.webp";
 const patternImage =
