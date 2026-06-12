@@ -327,8 +327,8 @@ function SectionTitle({
 function ConsultationButton({ children, variant = "mint" }: { children: string; variant?: "mint" | "outline" }) {
   const className =
     variant === "mint"
-      ? "w-full rounded-full border border-[#d9b86c]/70 bg-[linear-gradient(135deg,#d4956a_0%,#f5dfc0_48%,#d9b86c_100%)] px-5 py-4 text-sm font-extrabold text-[#1a0e06] shadow-[0_18px_42px_rgba(217,184,108,0.24)] transition hover:border-[#fff4d8]/90 hover:brightness-110 sm:w-auto sm:px-7 sm:py-6 sm:text-base"
-      : "w-full rounded-full border-[#d9b86c]/48 bg-[#0f0b08]/70 px-5 py-4 text-sm font-bold text-[#f8edd4] hover:border-[#d9b86c]/75 hover:bg-[#d9b86c]/10 hover:text-white sm:w-auto sm:px-7 sm:py-6 sm:text-base";
+      ? "w-full rounded-full border border-[#8adfce]/70 bg-[linear-gradient(135deg,#6ed9c7_0%,#d9fff5_48%,#8adfce_100%)] px-5 py-4 text-sm font-extrabold text-[#06110f] shadow-[0_18px_42px_rgba(138,223,206,0.24)] transition hover:border-[#d9fff5]/90 hover:brightness-110 sm:w-auto sm:px-7 sm:py-6 sm:text-base"
+      : "w-full rounded-full border-[#8adfce]/48 bg-[#07110f]/70 px-5 py-4 text-sm font-bold text-[#e8fff9] hover:border-[#8adfce]/75 hover:bg-[#8adfce]/10 hover:text-white sm:w-auto sm:px-7 sm:py-6 sm:text-base";
 
   return (
     <Button asChild type="button" size="lg" variant={variant === "mint" ? "default" : "outline"} className={className}>
@@ -347,7 +347,7 @@ function ExternalButton({ href, children, variant = "outline" }: { href: string;
       variant={variant === "mint" ? "default" : "outline"}
       className={
         variant === "mint"
-          ? "rounded-full bg-[linear-gradient(135deg,#d4956a,#d9b86c)] px-6 py-5 text-sm font-extrabold text-[#1a0e06] hover:brightness-110"
+          ? "rounded-full bg-[#8adfce] px-6 py-5 text-sm font-extrabold text-[#07110f] hover:bg-[#a2f1e2]"
           : "rounded-full border-[#d9b86c]/40 bg-black/20 px-6 py-5 text-sm font-bold text-[#f8edd4] hover:bg-[#d9b86c]/10 hover:text-white"
       }
     >
@@ -419,7 +419,7 @@ export default function Home() {
                       target="_blank"
                       rel="noreferrer"
                       onClick={() => setServiceDropdownOpen(false)}
-                      className="block px-4 py-2.5 text-sm text-[#d7ccb4]/80 transition hover:bg-[#d9b86c]/10 hover:text-[#8adfce]"
+                      className="block px-4 py-2.5 text-sm text-[#d7ccb4]/80 transition hover:bg-[#8adfce]/10 hover:text-[#8adfce]"
                     >
                       {item.label}
                     </a>
@@ -430,7 +430,7 @@ export default function Home() {
           </nav>
           <button
             type="button"
-            className={`absolute right-4 top-1/2 inline-flex h-11 -translate-y-1/2 items-center justify-center gap-1.5 rounded-full border border-[#d9b86c]/80 bg-[linear-gradient(135deg,rgba(18,15,11,0.95),rgba(217,184,108,0.22))] px-3.5 text-xs font-extrabold text-[#8adfce] shadow-[0_12px_30px_rgba(0,0,0,0.3),0_0_24px_rgba(217,184,108,0.22)] backdrop-blur transition hover:border-[#d9b86c]/90 hover:bg-[#d9b86c]/15 hover:shadow-[0_0_32px_rgba(217,184,108,0.35)] lg:hidden ${menuPulse ? 'animate-[menuPulse_0.8s_ease-in-out_3]' : ''}`}
+            className={`absolute right-4 top-1/2 inline-flex h-11 -translate-y-1/2 items-center justify-center gap-1.5 rounded-full border border-[#8adfce]/80 bg-[linear-gradient(135deg,rgba(18,15,11,0.95),rgba(138,223,206,0.32))] px-3.5 text-xs font-extrabold text-[#8adfce] shadow-[0_12px_30px_rgba(0,0,0,0.3),0_0_24px_rgba(138,223,206,0.25)] backdrop-blur transition hover:border-[#8adfce]/90 hover:bg-[#8adfce]/15 hover:shadow-[0_0_32px_rgba(138,223,206,0.35)] lg:hidden ${menuPulse ? 'animate-[menuPulse_0.8s_ease-in-out_3]' : ''}`}
             aria-label="모바일 메뉴 열기"
             aria-expanded={mobileMenuOpen}
             onClick={() => setMobileMenuOpen((open) => !open)}
@@ -448,7 +448,7 @@ export default function Home() {
                     key={label}
                     href={href}
                     onClick={() => setMobileMenuOpen(false)}
-                    className="rounded-full border border-[#d9b86c]/18 bg-[#120f0b]/88 px-3 py-3 text-center font-serif-kr text-sm font-semibold text-[#fff4d8] transition hover:border-[#d9b86c]/45 hover:bg-[#d9b86c]/10 hover:text-[#d9fff5]"
+                    className="rounded-full border border-[#d9b86c]/18 bg-[#120f0b]/88 px-3 py-3 text-center font-serif-kr text-sm font-semibold text-[#fff4d8] transition hover:border-[#8adfce]/45 hover:bg-[#8adfce]/10 hover:text-[#d9fff5]"
                   >
                     {label}
                   </a>
@@ -461,7 +461,7 @@ export default function Home() {
                     target="_blank"
                     rel="noreferrer"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="rounded-full border border-[#d9b86c]/18 bg-[#100c08]/88 px-3 py-3 text-center font-serif-kr text-sm font-semibold text-[#8adfce]/80 transition hover:border-[#d9b86c]/45 hover:bg-[#d9b86c]/10 hover:text-[#d9fff5]"
+                    className="rounded-full border border-[#8adfce]/18 bg-[#071110]/88 px-3 py-3 text-center font-serif-kr text-sm font-semibold text-[#8adfce]/80 transition hover:border-[#8adfce]/45 hover:bg-[#8adfce]/10 hover:text-[#d9fff5]"
                   >
                     {item.label}
                   </a>
@@ -476,14 +476,13 @@ export default function Home() {
         <section className="grain relative min-h-[100svh] overflow-hidden pt-24">
           <div className="absolute inset-0">
             <img src={heroImage} alt="블랙과 골드 조명 아래 완성되는 프리미엄 뮤지컬웨딩 무대" className="h-full w-full object-cover object-[center_40%] sm:object-center" />
-            <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(18,10,4,0.87)_0%,rgba(40,20,8,0.44)_40%,rgba(40,20,8,0.48)_60%,rgba(18,10,4,0.92)_100%)]" />
-            <div className="absolute inset-0 bg-[rgba(55,25,8,0.18)] mix-blend-multiply" />
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,rgba(217,184,108,0.10),transparent_50%),radial-gradient(circle_at_50%_20%,rgba(217,184,108,0.12),transparent_40%)]" />
+            <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(9,8,6,0.82)_0%,rgba(9,8,6,0.38)_40%,rgba(9,8,6,0.42)_60%,rgba(9,8,6,0.88)_100%)]" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,rgba(138,223,206,0.10),transparent_50%),radial-gradient(circle_at_50%_20%,rgba(217,184,108,0.12),transparent_40%)]" />
           </div>
 
           <div className="container relative z-10 flex min-h-[calc(100svh-6rem)] flex-col items-center justify-center gap-8 px-5 py-16 text-center sm:gap-12 sm:py-20">
             <div className="animate-rise-in max-w-4xl">
-              <div className="mx-auto inline-flex max-w-full items-center gap-2 rounded-full border border-[#d9b86c]/35 bg-[#0f0b08]/50 px-3 py-2 text-[11px] font-semibold tracking-[-0.03em] text-[#d9fff5] backdrop-blur min-[360px]:text-xs sm:gap-3 sm:px-4 sm:text-sm">
+              <div className="mx-auto inline-flex max-w-full items-center gap-2 rounded-full border border-[#8adfce]/35 bg-[#07110f]/50 px-3 py-2 text-[11px] font-semibold tracking-[-0.03em] text-[#d9fff5] backdrop-blur min-[360px]:text-xs sm:gap-3 sm:px-4 sm:text-sm">
                 <Sparkles className="h-3.5 w-3.5 shrink-0 text-[#8adfce] sm:h-4 sm:w-4" />
                 <span className="whitespace-nowrap">신랑신부가 주인공이 되는 프리미엄 뮤지컬웨딩</span>
               </div>
@@ -497,7 +496,7 @@ export default function Home() {
               </p>
               <div className="mt-7 flex w-full max-w-md flex-col items-center justify-center gap-3 sm:mt-10 sm:max-w-none sm:flex-row sm:gap-4">
                 <ConsultationButton>카카오톡 상담요청하기</ConsultationButton>
-                <Button asChild size="lg" className="w-full rounded-full border border-[#d9b86c]/55 bg-[linear-gradient(135deg,rgba(9,8,6,0.94),rgba(217,184,108,0.16))] px-5 py-4 text-sm font-extrabold text-[#f8edd4] shadow-[0_16px_36px_rgba(0,0,0,0.28)] transition hover:border-[#fff4d8]/75 hover:bg-[#d9b86c]/12 hover:text-white sm:w-auto sm:px-7 sm:py-6 sm:text-base">
+                <Button asChild size="lg" className="w-full rounded-full border border-[#8adfce]/55 bg-[linear-gradient(135deg,rgba(9,8,6,0.94),rgba(138,223,206,0.16))] px-5 py-4 text-sm font-extrabold text-[#e8fff9] shadow-[0_16px_36px_rgba(0,0,0,0.28)] transition hover:border-[#d9fff5]/75 hover:bg-[#8adfce]/12 hover:text-white sm:w-auto sm:px-7 sm:py-6 sm:text-base">
                   <a href="#details">자세한 내용 보기</a>
                 </Button>
               </div>
@@ -507,14 +506,14 @@ export default function Home() {
           </div>
           <a href="#details" className="absolute bottom-7 left-1/2 z-20 flex -translate-x-1/2 flex-col items-center gap-3 text-[0.66rem] font-bold uppercase tracking-[0.26em] text-[#8adfce]/86 transition hover:text-[#d9fff5]" aria-label="아래 내용으로 스크롤">
             <span>Scroll</span>
-            <span className="relative h-11 w-px overflow-hidden bg-[#d9b86c]/25 after:absolute after:left-0 after:top-0 after:h-5 after:w-px after:animate-[scrollCue_1.8s_ease-in-out_infinite] after:bg-[#d9b86c]" />
+            <span className="relative h-11 w-px overflow-hidden bg-[#d9b86c]/25 after:absolute after:left-0 after:top-0 after:h-5 after:w-px after:animate-[scrollCue_1.8s_ease-in-out_infinite] after:bg-[#8adfce]" />
           </a>
         </section>
 
         <section id="details" className="scroll-mt-24 border-y border-[#d9b86c]/10 bg-[#0d0a07] py-10">
           <div className="container grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {trustPoints.map(({ value, label, caption, icon: Icon }) => (
-              <article key={label} className="group rounded-[1.4rem] border border-[#d9b86c]/15 bg-[#120f0b] p-4 transition duration-500 hover:-translate-y-1 hover:border-[#d9b86c]/35 sm:rounded-[1.8rem] sm:p-6">
+              <article key={label} className="group rounded-[1.4rem] border border-[#d9b86c]/15 bg-[#120f0b] p-4 transition duration-500 hover:-translate-y-1 hover:border-[#8adfce]/35 sm:rounded-[1.8rem] sm:p-6">
                 <Icon className="h-6 w-6 text-[#8adfce]" />
                 <p className="mt-5 font-display text-4xl font-bold text-[#d9b86c]">{value}</p>
                 <h3 className="mt-2 font-serif-kr text-xl font-semibold text-[#fff4d8]">{label}</h3>
@@ -638,7 +637,7 @@ export default function Home() {
                 </div>
                 <div className="mt-4 grid gap-2 sm:grid-cols-3">
                   {processSteps.map((step) => (
-                    <article key={step.no} className="group rounded-[1.05rem] border border-white/10 bg-white/[0.035] px-3 py-3 transition duration-500 hover:border-[#d9b86c]/35 hover:bg-[#d9b86c]/[0.055]">
+                    <article key={step.no} className="group rounded-[1.05rem] border border-white/10 bg-white/[0.035] px-3 py-3 transition duration-500 hover:border-[#8adfce]/35 hover:bg-[#8adfce]/[0.055]">
                       <div className="flex items-center gap-2.5">
                         <span className="font-display text-sm font-bold text-[#8adfce]">{step.no}</span>
                         <h4 className="truncate font-serif-kr text-base font-semibold text-[#fff4d8]">{step.title}</h4>
@@ -649,8 +648,8 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="rounded-[2rem] border border-[#d9b86c]/20 bg-[#130f0b] p-4 md:p-5">
-                <div className="flex flex-col gap-2 border-b border-[#d9b86c]/12 pb-4">
+              <div className="rounded-[2rem] border border-[#8adfce]/20 bg-[#101713] p-4 md:p-5">
+                <div className="flex flex-col gap-2 border-b border-[#8adfce]/12 pb-4">
                   <p className="section-kicker">Package Guide</p>
                   <h3 className="font-serif-kr text-xl font-semibold text-[#fff4d8] md:text-2xl">상품 구성 한눈에 보기</h3>
                 </div>
@@ -658,7 +657,7 @@ export default function Home() {
                   {productTypes.map(({ title, subtitle, body, icon: Icon }) => (
                     <article key={title} className="rounded-[1.1rem] border border-white/10 bg-black/20 p-3">
                       <div className="flex items-center gap-3">
-                        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[#d9b86c]/25 bg-[#d9b86c]/10 text-[#8adfce]">
+                        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[#8adfce]/25 bg-[#8adfce]/10 text-[#8adfce]">
                           <Icon className="h-4 w-4" />
                         </span>
                         <div className="min-w-0">
@@ -673,7 +672,7 @@ export default function Home() {
               </div>
             </div>
 
-            <Accordion type="single" collapsible className="mt-5 rounded-[1.6rem] border border-[#d9b86c]/18 bg-[#130f0b] px-3">
+            <Accordion type="single" collapsible className="mt-5 rounded-[1.6rem] border border-[#8adfce]/18 bg-[#101713] px-3">
               <AccordionItem value="venue" className="border-b-0">
                 <AccordionTrigger className="rounded-[1.25rem] px-3 py-4 text-left font-serif-kr text-lg font-semibold text-[#fff4d8] hover:no-underline">
                   구성 전 확인이 필요한 현장 조건
@@ -709,7 +708,7 @@ export default function Home() {
                     ))}
                   </div>
 
-                  <Accordion type="single" collapsible className="mt-5 rounded-[1.5rem] border border-[#d9b86c]/18 bg-[linear-gradient(145deg,rgba(28,20,11,0.76),rgba(14,11,8,0.92))] p-2 shadow-[0_18px_60px_rgba(0,0,0,0.16)]">
+                  <Accordion type="single" collapsible className="mt-5 rounded-[1.5rem] border border-[#8adfce]/18 bg-[linear-gradient(145deg,rgba(11,28,24,0.76),rgba(14,11,8,0.92))] p-2 shadow-[0_18px_60px_rgba(0,0,0,0.16)]">
                     <AccordionItem value="repertoire" className="border-b-0">
                       <AccordionTrigger className="rounded-[1.25rem] px-4 pb-2 pt-4 text-left hover:no-underline md:px-5">
                         <span className="flex min-w-0 flex-col gap-2">
@@ -728,7 +727,7 @@ export default function Home() {
                                   <h4 className="mt-1 break-keep font-serif-kr text-lg font-semibold leading-snug text-[#d9b86c]">{group.title}</h4>
                                   <p className="mt-2 break-keep text-sm leading-6 text-[#d7ccb4]/72">{group.caption}</p>
                                 </div>
-                                <span className="w-fit rounded-full border border-[#d9b86c]/22 bg-[#d9b86c]/10 px-3 py-1 text-xs font-bold text-[#8adfce]">{group.songs.length}곡 예시</span>
+                                <span className="w-fit rounded-full border border-[#8adfce]/22 bg-[#8adfce]/10 px-3 py-1 text-xs font-bold text-[#8adfce]">{group.songs.length}곡 예시</span>
                               </div>
                               <div className="mt-4 flex flex-wrap gap-2">
                                 {group.songs.map((song) => (
@@ -738,7 +737,7 @@ export default function Home() {
                             </div>
                           ))}
                         </div>
-                        <p className="mt-5 rounded-[1.25rem] border border-[#d9b86c]/16 bg-[#d9b86c]/8 px-4 py-4 text-sm leading-7 text-[#d7ccb4]/82 md:text-base">
+                        <p className="mt-5 rounded-[1.25rem] border border-[#8adfce]/16 bg-[#8adfce]/8 px-4 py-4 text-sm leading-7 text-[#d7ccb4]/82 md:text-base">
                           리스트 외 신청곡도 상담 가능합니다. 실제 진행곡은 예식장 음향 환경, 배우 구성, 동선, 두 분의 취향을 함께 확인한 뒤 가장 자연스러운 순서로 제안드립니다.
                         </p>
                       </AccordionContent>
@@ -773,7 +772,7 @@ export default function Home() {
                 </article>
               ))}
             </div>
-            <div className="mt-5 rounded-[1.5rem] border border-[#d9b86c]/16 bg-[#0f0b08]/55 p-4">
+            <div className="mt-5 rounded-[1.5rem] border border-[#8adfce]/16 bg-[#07110f]/55 p-4">
               <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
                 <div>
                   <p className="text-xs font-bold tracking-[0.18em] text-[#8adfce]">MORE SAMPLE</p>
@@ -781,7 +780,7 @@ export default function Home() {
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {sampleVideos.slice(4).map((video) => (
-                    <a key={video.title} href={video.src} target="_blank" rel="noreferrer" className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-2 text-xs font-semibold text-[#efe2c8]/86 transition hover:border-[#d9b86c]/45 hover:text-[#d9fff5]">
+                    <a key={video.title} href={video.src} target="_blank" rel="noreferrer" className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-2 text-xs font-semibold text-[#efe2c8]/86 transition hover:border-[#8adfce]/45 hover:text-[#d9fff5]">
                       {video.title}
                     </a>
                   ))}
@@ -801,7 +800,7 @@ export default function Home() {
             />
             <div className="mt-12 grid gap-6 lg:grid-cols-3">
               {packages.map((pkg) => (
-                <article key={pkg.title} className="relative overflow-hidden rounded-[1.6rem] border border-[#d9b86c]/18 bg-[#120f0b] p-5 transition duration-500 hover:border-[#d9b86c]/35 hover:shadow-[0_0_30px_rgba(217,184,108,0.08)] sm:rounded-[2.2rem] sm:p-7">
+                <article key={pkg.title} className="relative overflow-hidden rounded-[1.6rem] border border-[#d9b86c]/18 bg-[#120f0b] p-5 transition duration-500 hover:border-[#8adfce]/35 hover:shadow-[0_0_30px_rgba(138,223,206,0.08)] sm:rounded-[2.2rem] sm:p-7">
                   <div className="flex items-start justify-between gap-4">
                     <div>
                       <p className="text-sm font-bold tracking-[0.2em] text-[#8adfce]">{pkg.people}</p>
@@ -824,7 +823,7 @@ export default function Home() {
                 </article>
               ))}
             </div>
-            <div className="mt-8 rounded-[1.8rem] border border-[#d9b86c]/20 bg-[#130f0b] p-6 text-center">
+            <div className="mt-8 rounded-[1.8rem] border border-[#8adfce]/20 bg-[#101713] p-6 text-center">
               <p className="font-serif-kr text-base font-semibold tracking-[-0.04em] text-[#fff4d8] sm:text-xl">신랑·신부 참여형은 별도 상담형입니다.</p>
               <p className="mt-3 text-sm leading-7 text-[#d7ccb4]/76 sm:text-base sm:leading-8">
                 리스트 외 신청곡, 배우와 함께 부르는<br className="sm:hidden" />
@@ -858,7 +857,7 @@ export default function Home() {
                   </div>
                   <div className="flex flex-col justify-between rounded-[1.85rem] border border-white/10 bg-black/24 p-5 md:p-6">
                     <div>
-                      <div className="inline-flex items-center gap-2 rounded-full border border-[#d9b86c]/28 bg-[#d9b86c]/10 px-4 py-2 text-xs font-bold tracking-[0.18em] text-[#8adfce]">
+                      <div className="inline-flex items-center gap-2 rounded-full border border-[#8adfce]/28 bg-[#8adfce]/10 px-4 py-2 text-xs font-bold tracking-[0.18em] text-[#8adfce]">
                         <Crown className="h-4 w-4" />
                         Musical Team Manager
                       </div>
@@ -873,7 +872,7 @@ export default function Home() {
                   </div>
                 </div>
               </article>
-              <div className="rounded-[1.5rem] border border-[#d9b86c]/18 bg-[linear-gradient(145deg,rgba(217,184,108,0.08),rgba(19,15,11,0.95))] p-3.5 sm:rounded-[2.3rem] sm:p-5 md:p-7">
+              <div className="rounded-[1.5rem] border border-[#8adfce]/18 bg-[linear-gradient(145deg,rgba(138,223,206,0.1),rgba(16,23,19,0.95))] p-3.5 sm:rounded-[2.3rem] sm:p-5 md:p-7">
                 <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
                   <div>
                     <p className="section-kicker">Musical Cast</p>
@@ -883,7 +882,7 @@ export default function Home() {
                     type="button"
                     onClick={() => setCastProfilesOpen((open) => !open)}
                     aria-expanded={castProfilesOpen}
-                    className="inline-flex items-center justify-center gap-2 rounded-full border border-[#d9b86c]/38 bg-[#d9b86c]/10 px-5 py-3 text-sm font-extrabold text-[#d9fff5] shadow-[0_14px_34px_rgba(0,0,0,0.24)] transition hover:border-[#d9fff5]/70 hover:bg-[#d9b86c]/16"
+                    className="inline-flex items-center justify-center gap-2 rounded-full border border-[#8adfce]/38 bg-[#8adfce]/10 px-5 py-3 text-sm font-extrabold text-[#d9fff5] shadow-[0_14px_34px_rgba(0,0,0,0.24)] transition hover:border-[#d9fff5]/70 hover:bg-[#8adfce]/16"
                   >
                     {castProfilesOpen ? "배우 프로필 접기" : "배우 프로필 보기"}
                     <ChevronRight className={`h-4 w-4 transition ${castProfilesOpen ? "rotate-90 text-[#8adfce]" : ""}`} />
@@ -892,8 +891,8 @@ export default function Home() {
                 {castProfilesOpen ? (
                   <div className="mt-7 grid grid-cols-2 items-stretch gap-3 sm:gap-4 md:grid-cols-3">
                     {actorCastProfiles.map((actor) => (
-                      <article key={actor.name} className="group flex h-full flex-col rounded-[1.65rem] border border-[#d9b86c]/14 bg-[linear-gradient(180deg,rgba(17,12,7,0.94),rgba(9,8,6,0.8))] p-2.5 text-center shadow-[0_18px_46px_rgba(0,0,0,0.22)] transition duration-500 hover:-translate-y-1 hover:border-[#d9b86c]/42 hover:bg-[#130f0b] sm:p-3">
-                        <div className="relative aspect-[4/5] overflow-hidden rounded-[1.32rem] border border-[#d9b86c]/30 bg-[#050705] shadow-[inset_0_0_0_1px_rgba(255,255,255,0.05),0_20px_34px_rgba(0,0,0,0.28)]">
+                      <article key={actor.name} className="group flex h-full flex-col rounded-[1.65rem] border border-[#8adfce]/14 bg-[linear-gradient(180deg,rgba(8,17,15,0.94),rgba(9,8,6,0.8))] p-2.5 text-center shadow-[0_18px_46px_rgba(0,0,0,0.22)] transition duration-500 hover:-translate-y-1 hover:border-[#8adfce]/42 hover:bg-[#101713] sm:p-3">
+                        <div className="relative aspect-[4/5] overflow-hidden rounded-[1.32rem] border border-[#8adfce]/30 bg-[#050705] shadow-[inset_0_0_0_1px_rgba(255,255,255,0.05),0_20px_34px_rgba(0,0,0,0.28)]">
                           <img
                             src={actor.image}
                             alt={`${actor.name} ${actor.role} 프로필 사진`}
@@ -905,7 +904,7 @@ export default function Home() {
                             <h4 className="font-serif-kr text-xl font-semibold leading-tight text-[#fff4d8] sm:text-2xl">{actor.name}</h4>
                             <p className="mt-1 text-sm font-medium text-[#8adfce]">{actor.role}</p>
                           </div>
-                          <div className="mt-4 h-px w-full bg-[linear-gradient(90deg,transparent,rgba(217,184,108,0.22),transparent)]" />
+                          <div className="mt-4 h-px w-full bg-[linear-gradient(90deg,transparent,rgba(138,223,206,0.32),transparent)]" />
                         </div>
                       </article>
                     ))}
@@ -926,8 +925,8 @@ export default function Home() {
             </div>
             <div className="mt-12 grid gap-5 md:grid-cols-3">
               {assuranceItems.map(({ title, body, icon: Icon }) => (
-                <article key={title} className="rounded-[1.4rem] border border-[#d9b86c]/16 bg-[#14100b] p-4 text-center transition duration-500 hover:border-[#d9b86c]/30 sm:rounded-[2rem] sm:p-5 md:p-8">
-                  <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full border border-[#d9b86c]/28 bg-[#d9b86c]/8 text-[#8adfce] md:h-16 md:w-16">
+                <article key={title} className="rounded-[1.4rem] border border-[#d9b86c]/16 bg-[#14100b] p-4 text-center transition duration-500 hover:border-[#8adfce]/30 sm:rounded-[2rem] sm:p-5 md:p-8">
+                  <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full border border-[#8adfce]/28 bg-[#8adfce]/8 text-[#8adfce] md:h-16 md:w-16">
                     <Icon className="h-6 w-6 md:h-7 md:w-7" />
                   </div>
                   <h3 className="mt-5 whitespace-nowrap font-serif-kr text-base font-semibold tracking-[-0.03em] text-[#fff4d8] sm:text-lg md:text-2xl">{title}</h3>
@@ -935,11 +934,11 @@ export default function Home() {
                 </article>
               ))}
             </div>
-            <div className="mt-10 rounded-[1.4rem] border border-[#d9b86c]/35 bg-[linear-gradient(135deg,rgba(217,184,108,0.2),rgba(16,23,19,0.94))] p-4 shadow-[0_0_45px_rgba(217,184,108,0.12)] sm:rounded-[2.2rem] sm:p-5 md:p-7">
+            <div className="mt-10 rounded-[1.4rem] border border-[#8adfce]/35 bg-[linear-gradient(135deg,rgba(138,223,206,0.2),rgba(16,23,19,0.94))] p-4 shadow-[0_0_45px_rgba(138,223,206,0.12)] sm:rounded-[2.2rem] sm:p-5 md:p-7">
               <p className="section-kicker text-center">Inus Quick Links</p>
               <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
                 {quickLinks.map(([label, href]) => (
-                  <a key={label} href={href} target="_blank" rel="noreferrer" className="group flex min-h-16 items-center justify-center rounded-[1.25rem] border border-[#d9b86c]/22 bg-[linear-gradient(135deg,rgba(9,8,6,0.72),rgba(217,184,108,0.08))] px-4 py-4 text-center font-serif-kr text-base font-semibold text-[#fff4d8] shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] transition hover:-translate-y-0.5 hover:border-[#d9b86c]/45 hover:bg-[#d9b86c]/10 md:text-lg">
+                  <a key={label} href={href} target="_blank" rel="noreferrer" className="group flex min-h-16 items-center justify-center rounded-[1.25rem] border border-[#d9b86c]/22 bg-[linear-gradient(135deg,rgba(9,8,6,0.72),rgba(217,184,108,0.08))] px-4 py-4 text-center font-serif-kr text-base font-semibold text-[#fff4d8] shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] transition hover:-translate-y-0.5 hover:border-[#8adfce]/45 hover:bg-[#8adfce]/10 md:text-lg">
                     <span>{label}</span>
                   </a>
                 ))}
@@ -950,7 +949,7 @@ export default function Home() {
 
         <section className="relative overflow-hidden py-20 md:py-28">
           <div className="container grid gap-6 lg:grid-cols-2">
-            <article className="rounded-[1.4rem] border border-[#d9b86c]/24 bg-[linear-gradient(135deg,rgba(217,184,108,0.12),rgba(9,8,6,0.96))] p-5 sm:rounded-[2.2rem] sm:p-8">
+            <article className="rounded-[1.4rem] border border-[#8adfce]/24 bg-[linear-gradient(135deg,rgba(138,223,206,0.12),rgba(9,8,6,0.96))] p-5 sm:rounded-[2.2rem] sm:p-8">
               <Mic2 className="h-8 w-8 text-[#8adfce]" />
               <p className="section-kicker mt-6">Musical Song Only</p>
               <h2 className="mt-4 font-serif-kr text-3xl font-semibold leading-tight text-[#fff4d8] md:text-4xl">
@@ -970,7 +969,7 @@ export default function Home() {
                 <span className="block">후기 참여혜택과</span>
                 <span className="block">특별 이벤트</span>
               </h2>
-              <Accordion type="single" collapsible className="mt-6 rounded-[1.65rem] border border-[#d9b86c]/18 bg-black/20 p-2">
+              <Accordion type="single" collapsible className="mt-6 rounded-[1.65rem] border border-[#8adfce]/18 bg-black/20 p-2">
                 <AccordionItem value="benefits" className="border-b-0">
                   <AccordionTrigger className="rounded-[1.35rem] px-4 py-4 text-left font-serif-kr text-lg font-semibold text-[#fff4d8] hover:no-underline">
                     후기 혜택 이벤트 보기
@@ -983,7 +982,7 @@ export default function Home() {
                           <h3 className="font-serif-kr text-lg font-semibold text-[#fff4d8]">{benefit.title}</h3>
                           <p className="mt-2 text-sm leading-7 text-[#d7ccb4]/76">{benefit.body}</p>
                           {benefit.actionUrl ? (
-                            <a href={benefit.actionUrl} target="_blank" rel="noreferrer" className="mt-4 inline-flex rounded-full border border-[#d9b86c]/42 bg-[#d9b86c]/10 px-4 py-2 text-sm font-bold text-[#f8edd4] transition hover:border-[#d9b86c]/45 hover:text-white">
+                            <a href={benefit.actionUrl} target="_blank" rel="noreferrer" className="mt-4 inline-flex rounded-full border border-[#d9b86c]/42 bg-[#d9b86c]/10 px-4 py-2 text-sm font-bold text-[#f8edd4] transition hover:border-[#8adfce]/45 hover:text-white">
                               {benefit.actionLabel}
                             </a>
                           ) : null}
@@ -1033,7 +1032,7 @@ export default function Home() {
               align="center"
               compact
             />
-            <Accordion type="single" collapsible className="mx-auto mt-10 max-w-5xl rounded-[1.4rem] border border-[#d9b86c]/18 bg-[linear-gradient(135deg,rgba(7,17,15,0.88),rgba(18,15,11,0.94))] p-2.5 shadow-[0_24px_70px_rgba(0,0,0,0.28)] sm:rounded-[2.2rem] sm:p-4 md:p-5">
+            <Accordion type="single" collapsible className="mx-auto mt-10 max-w-5xl rounded-[1.4rem] border border-[#8adfce]/18 bg-[linear-gradient(135deg,rgba(7,17,15,0.88),rgba(18,15,11,0.94))] p-2.5 shadow-[0_24px_70px_rgba(0,0,0,0.28)] sm:rounded-[2.2rem] sm:p-4 md:p-5">
               <AccordionItem value="additional-services" className="border-b-0">
                 <AccordionTrigger className="rounded-[1.65rem] px-5 py-5 text-left hover:no-underline">
                   <span className="flex min-w-0 flex-col gap-2">
@@ -1050,7 +1049,7 @@ export default function Home() {
                         href={service.href}
                         target="_blank"
                         rel="noreferrer"
-                        className="group flex min-h-[6.8rem] flex-col justify-between rounded-[1.25rem] border border-[#d9b86c]/15 bg-[linear-gradient(150deg,rgba(18,15,11,0.94),rgba(9,8,6,0.78))] p-3.5 transition duration-500 hover:-translate-y-0.5 hover:border-[#d9b86c]/45 hover:bg-[#130f0b] sm:p-4"
+                        className="group flex min-h-[6.8rem] flex-col justify-between rounded-[1.25rem] border border-[#d9b86c]/15 bg-[linear-gradient(150deg,rgba(18,15,11,0.94),rgba(9,8,6,0.78))] p-3.5 transition duration-500 hover:-translate-y-0.5 hover:border-[#8adfce]/45 hover:bg-[#101713] sm:p-4"
                       >
                         <div className="flex items-center justify-between gap-2">
                           <span className="font-display text-[0.68rem] font-bold tracking-[0.18em] text-[#8adfce]">0{index + 1}</span>
@@ -1073,7 +1072,7 @@ export default function Home() {
           <div className="absolute inset-0 opacity-18" style={{ backgroundImage: `url(${patternImage})`, backgroundSize: "620px", backgroundPosition: "center" }} />
           <div className="container relative z-10">
             <div className="mx-auto max-w-5xl rounded-[1.6rem] border border-[#d9b86c]/20 bg-[linear-gradient(135deg,rgba(20,16,11,0.96),rgba(9,8,6,0.92))] p-6 text-center shadow-2xl shadow-black/45 sm:rounded-[2.6rem] sm:p-8 md:p-14">
-              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full border border-[#d9b86c]/35 bg-[#d9b86c]/10 text-[#8adfce]">
+              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full border border-[#8adfce]/35 bg-[#8adfce]/10 text-[#8adfce]">
                 <MessageCircle className="h-7 w-7" />
               </div>
               <p className="section-kicker mt-8">Final Curtain</p>

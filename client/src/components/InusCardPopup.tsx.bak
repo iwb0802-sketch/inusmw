@@ -112,7 +112,7 @@ export default function InusCardPopup() {
               >
                 💌 <span className="font-medium">20만원 이상 예약 고객</span>
                 {" "}
-                모바일 청첩장 <span style={{ color: "#d9b86c" }} className="font-semibold">무료 제작 지원</span>
+                모바일 청첩장 <span style={{ color: "#8adfce" }} className="font-semibold">무료 제작 지원</span>
               </p>
             </div>
           </div>
