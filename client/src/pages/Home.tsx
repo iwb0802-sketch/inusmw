@@ -363,7 +363,7 @@ function SectionTitle({
 function ConsultationButton({ children, variant = "mint" }: { children: string; variant?: "mint" | "outline" }) {
   const className =
     variant === "mint"
-      ? "w-full rounded-lg border border-[#d9b86c] bg-transparent px-5 py-4 text-sm font-bold text-white transition hover:bg-[#d9b86c]/10 hover:text-white sm:w-auto sm:px-7 sm:py-6 sm:text-base"
+      ? "w-full rounded-lg border border-[#f0e6c8] bg-[#f0e6c8] px-5 py-4 text-sm font-bold text-[#1a0e06] transition hover:bg-[#fff4d8] hover:border-[#fff4d8] sm:w-auto sm:px-7 sm:py-6 sm:text-base"
       : "w-full rounded-lg border border-[#d9b86c]/48 bg-[#0f0b08]/70 px-5 py-4 text-sm font-bold text-[#f8edd4] hover:border-[#d9b86c]/75 hover:bg-[#d9b86c]/10 hover:text-white sm:w-auto sm:px-7 sm:py-6 sm:text-base";
 
   return (
@@ -462,7 +462,7 @@ export default function Home() {
           </nav>
           <button
             type="button"
-            className={`absolute right-4 top-1/2 inline-flex h-11 -translate-y-1/2 items-center justify-center gap-1.5 rounded-full border border-[#d9b86c]/80 bg-[linear-gradient(135deg,rgba(18,15,11,0.95),rgba(217,184,108,0.22))] px-3.5 text-xs font-extrabold text-[#9ed4c0] shadow-[0_12px_30px_rgba(0,0,0,0.3),0_0_24px_rgba(217,184,108,0.22)] backdrop-blur transition hover:border-[#d9b86c]/90 hover:bg-[#d9b86c]/15 hover:shadow-[0_0_32px_rgba(217,184,108,0.35)] lg:hidden ${menuPulse ? 'animate-[menuPulse_0.8s_ease-in-out_3]' : ''}`}
+            className={`absolute right-4 top-1/2 inline-flex h-11 -translate-y-1/2 items-center justify-center gap-1.5 rounded-full border border-[#d9b86c]/50 bg-transparent px-3.5 text-xs font-bold text-white backdrop-blur transition hover:border-[#d9b86c]/80 hover:bg-[#d9b86c]/10 lg:hidden ${menuPulse ? 'animate-[menuPulse_0.8s_ease-in-out_3]' : ''}`}
             aria-label="모바일 메뉴 열기"
             aria-expanded={mobileMenuOpen}
             onClick={() => setMobileMenuOpen((open) => !open)}
