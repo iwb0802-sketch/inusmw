@@ -63,7 +63,7 @@ const InstagramIcon = () => (
 const snsLinks = [
   {
     label: "홈페이지",
-    href: "https://inusmusic.kr/",
+    href: "http://inusmusic.com/",
     icon: Globe,
     isLucide: true,
   },
