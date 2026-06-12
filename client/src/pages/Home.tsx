@@ -391,12 +391,12 @@ export default function Home() {
             </span>
             <span className="min-w-0">
               <span className="block truncate font-display text-base font-semibold tracking-[0.18em] text-[#f8edd4] sm:text-lg sm:tracking-[0.24em] md:text-xl">INUS MUSIC</span>
-              <span className="block truncate text-[0.66rem] font-semibold tracking-[0.2em] text-[#8adfce] sm:text-xs sm:tracking-[0.28em]">MUSICAL WEDDING</span>
+              <span className="block truncate text-[0.66rem] font-semibold tracking-[0.2em] text-[#9ed4c0] sm:text-xs sm:tracking-[0.28em]">MUSICAL WEDDING</span>
             </span>
           </a>
           <nav className="hidden items-center gap-7 text-sm font-semibold text-[#d7ccb4]/76 lg:flex">
             {navItems.map(([label, href]) => (
-              <a key={label} href={href} className="transition hover:text-[#8adfce]">
+              <a key={label} href={href} className="transition hover:text-[#9ed4c0]">
                 {label}
               </a>
             ))}
@@ -405,7 +405,7 @@ export default function Home() {
               <button
                 type="button"
                 onClick={() => setServiceDropdownOpen((v) => !v)}
-                className="flex items-center gap-1 transition hover:text-[#8adfce]"
+                className="flex items-center gap-1 transition hover:text-[#9ed4c0]"
               >
                 서비스
                 <svg className={`h-3.5 w-3.5 transition-transform duration-200 ${serviceDropdownOpen ? "rotate-180" : ""}`} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M6 9l6 6 6-6"/></svg>
@@ -419,7 +419,7 @@ export default function Home() {
                       target="_blank"
                       rel="noreferrer"
                       onClick={() => setServiceDropdownOpen(false)}
-                      className="block px-4 py-2.5 text-sm text-[#d7ccb4]/80 transition hover:bg-[#d9b86c]/10 hover:text-[#8adfce]"
+                      className="block px-4 py-2.5 text-sm text-[#d7ccb4]/80 transition hover:bg-[#d9b86c]/10 hover:text-[#9ed4c0]"
                     >
                       {item.label}
                     </a>
@@ -430,7 +430,7 @@ export default function Home() {
           </nav>
           <button
             type="button"
-            className={`absolute right-4 top-1/2 inline-flex h-11 -translate-y-1/2 items-center justify-center gap-1.5 rounded-full border border-[#d9b86c]/80 bg-[linear-gradient(135deg,rgba(18,15,11,0.95),rgba(217,184,108,0.22))] px-3.5 text-xs font-extrabold text-[#8adfce] shadow-[0_12px_30px_rgba(0,0,0,0.3),0_0_24px_rgba(217,184,108,0.22)] backdrop-blur transition hover:border-[#d9b86c]/90 hover:bg-[#d9b86c]/15 hover:shadow-[0_0_32px_rgba(217,184,108,0.35)] lg:hidden ${menuPulse ? 'animate-[menuPulse_0.8s_ease-in-out_3]' : ''}`}
+            className={`absolute right-4 top-1/2 inline-flex h-11 -translate-y-1/2 items-center justify-center gap-1.5 rounded-full border border-[#d9b86c]/80 bg-[linear-gradient(135deg,rgba(18,15,11,0.95),rgba(217,184,108,0.22))] px-3.5 text-xs font-extrabold text-[#9ed4c0] shadow-[0_12px_30px_rgba(0,0,0,0.3),0_0_24px_rgba(217,184,108,0.22)] backdrop-blur transition hover:border-[#d9b86c]/90 hover:bg-[#d9b86c]/15 hover:shadow-[0_0_32px_rgba(217,184,108,0.35)] lg:hidden ${menuPulse ? 'animate-[menuPulse_0.8s_ease-in-out_3]' : ''}`}
             aria-label="모바일 메뉴 열기"
             aria-expanded={mobileMenuOpen}
             onClick={() => setMobileMenuOpen((open) => !open)}
@@ -448,7 +448,7 @@ export default function Home() {
                     key={label}
                     href={href}
                     onClick={() => setMobileMenuOpen(false)}
-                    className="rounded-full border border-[#d9b86c]/18 bg-[#120f0b]/88 px-3 py-3 text-center font-serif-kr text-sm font-semibold text-[#fff4d8] transition hover:border-[#d9b86c]/45 hover:bg-[#d9b86c]/10 hover:text-[#d9fff5]"
+                    className="rounded-full border border-[#d9b86c]/18 bg-[#120f0b]/88 px-3 py-3 text-center font-serif-kr text-sm font-semibold text-[#fff4d8] transition hover:border-[#d9b86c]/45 hover:bg-[#d9b86c]/10 hover:text-[#e8f5ef]"
                   >
                     {label}
                   </a>
@@ -461,7 +461,7 @@ export default function Home() {
                     target="_blank"
                     rel="noreferrer"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="rounded-full border border-[#d9b86c]/18 bg-[#100c08]/88 px-3 py-3 text-center font-serif-kr text-sm font-semibold text-[#8adfce]/80 transition hover:border-[#d9b86c]/45 hover:bg-[#d9b86c]/10 hover:text-[#d9fff5]"
+                    className="rounded-full border border-[#d9b86c]/18 bg-[#100c08]/88 px-3 py-3 text-center font-serif-kr text-sm font-semibold text-[#9ed4c0]/80 transition hover:border-[#d9b86c]/45 hover:bg-[#d9b86c]/10 hover:text-[#e8f5ef]"
                   >
                     {item.label}
                   </a>
@@ -483,8 +483,8 @@ export default function Home() {
 
           <div className="container relative z-10 flex min-h-[calc(100svh-6rem)] flex-col items-center justify-center gap-8 px-5 py-16 text-center sm:gap-12 sm:py-20">
             <div className="animate-rise-in max-w-4xl">
-              <div className="mx-auto inline-flex max-w-full items-center gap-2 rounded-full border border-[#d9b86c]/35 bg-[#0f0b08]/50 px-3 py-2 text-[11px] font-semibold tracking-[-0.03em] text-[#d9fff5] backdrop-blur min-[360px]:text-xs sm:gap-3 sm:px-4 sm:text-sm">
-                <Sparkles className="h-3.5 w-3.5 shrink-0 text-[#8adfce] sm:h-4 sm:w-4" />
+              <div className="mx-auto inline-flex max-w-full items-center gap-2 rounded-full border border-[#d9b86c]/35 bg-[#0f0b08]/50 px-3 py-2 text-[11px] font-semibold tracking-[-0.03em] text-[#e8f5ef] backdrop-blur min-[360px]:text-xs sm:gap-3 sm:px-4 sm:text-sm">
+                <Sparkles className="h-3.5 w-3.5 shrink-0 text-[#9ed4c0] sm:h-4 sm:w-4" />
                 <span className="whitespace-nowrap">신랑신부가 주인공이 되는 프리미엄 뮤지컬웨딩</span>
               </div>
               <h1 className="mt-6 font-serif-kr text-[1.75rem] font-semibold leading-[1.15] tracking-[-0.045em] text-[#fff8e7] min-[360px]:text-3xl sm:text-4xl md:text-7xl xl:text-8xl">
@@ -515,7 +515,7 @@ export default function Home() {
           <div className="container grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {trustPoints.map(({ value, label, caption, icon: Icon }) => (
               <article key={label} className="group rounded-[1.4rem] border border-[#d9b86c]/15 bg-[#120f0b] p-4 transition duration-500 hover:-translate-y-1 hover:border-[#d9b86c]/35 sm:rounded-[1.8rem] sm:p-6">
-                <Icon className="h-6 w-6 text-[#8adfce]" />
+                <Icon className="h-6 w-6 text-[#9ed4c0]" />
                 <p className="mt-5 font-display text-4xl font-bold text-[#d9b86c]">{value}</p>
                 <h3 className="mt-2 font-serif-kr text-xl font-semibold text-[#fff4d8]">{label}</h3>
                 <p className="mt-4 text-sm leading-7 text-[#d7ccb4]/72">{caption}</p>
@@ -583,7 +583,7 @@ export default function Home() {
                     <iframe className="h-full w-full" src={video.embed} title={video.title} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen />
                   </AspectRatio>
                   <div className="p-3.5 sm:p-5">
-                    <p className="text-xs font-bold tracking-[0.22em] text-[#8adfce]">{video.scene}</p>
+                    <p className="text-xs font-bold tracking-[0.22em] text-[#9ed4c0]">{video.scene}</p>
                     <h3 className="mt-2 font-serif-kr text-xl font-semibold text-[#fff4d8]">{video.title}</h3>
                   </div>
                 </article>
@@ -634,13 +634,13 @@ export default function Home() {
                     <p className="section-kicker">Wedding Flow</p>
                     <h3 className="mt-2 font-serif-kr text-xl font-semibold text-[#fff4d8] md:text-2xl">예식 진행 9장면</h3>
                   </div>
-                  <p className="hidden text-right text-xs font-bold tracking-[0.18em] text-[#8adfce]/80 sm:block">01–09 SCENE</p>
+                  <p className="hidden text-right text-xs font-bold tracking-[0.18em] text-[#9ed4c0]/80 sm:block">01–09 SCENE</p>
                 </div>
                 <div className="mt-4 grid gap-2 sm:grid-cols-3">
                   {processSteps.map((step) => (
                     <article key={step.no} className="group rounded-[1.05rem] border border-white/10 bg-white/[0.035] px-3 py-3 transition duration-500 hover:border-[#d9b86c]/35 hover:bg-[#d9b86c]/[0.055]">
                       <div className="flex items-center gap-2.5">
-                        <span className="font-display text-sm font-bold text-[#8adfce]">{step.no}</span>
+                        <span className="font-display text-sm font-bold text-[#9ed4c0]">{step.no}</span>
                         <h4 className="truncate font-serif-kr text-base font-semibold text-[#fff4d8]">{step.title}</h4>
                       </div>
                       <p className="mt-1.5 truncate text-xs leading-5 text-[#d7ccb4]/68">{step.body}</p>
@@ -658,12 +658,12 @@ export default function Home() {
                   {productTypes.map(({ title, subtitle, body, icon: Icon }) => (
                     <article key={title} className="rounded-[1.1rem] border border-white/10 bg-black/20 p-3">
                       <div className="flex items-center gap-3">
-                        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[#d9b86c]/25 bg-[#d9b86c]/10 text-[#8adfce]">
+                        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[#d9b86c]/25 bg-[#d9b86c]/10 text-[#9ed4c0]">
                           <Icon className="h-4 w-4" />
                         </span>
                         <div className="min-w-0">
                           <h4 className="font-serif-kr text-lg font-semibold text-[#fff4d8]">{title}</h4>
-                          <p className="text-xs font-bold tracking-[0.14em] text-[#8adfce]">{subtitle}</p>
+                          <p className="text-xs font-bold tracking-[0.14em] text-[#9ed4c0]">{subtitle}</p>
                         </div>
                       </div>
                       <p className="mt-2 text-xs leading-5 text-[#d7ccb4]/72">{body}</p>
@@ -693,7 +693,7 @@ export default function Home() {
                 <AccordionTrigger className="rounded-[1.6rem] px-5 pb-2 pt-5 text-left font-serif-kr text-xl font-semibold text-[#fff4d8] hover:no-underline md:text-2xl">
                   뮤지컬 대표 곡리스트 보기
                 </AccordionTrigger>
-                <p className="px-5 pb-5 text-sm leading-7 text-[#8adfce]/85">예약시 메일로 더 많은 곡리스트를 제공해 드리고 있습니다.</p>
+                <p className="px-5 pb-5 text-sm leading-7 text-[#9ed4c0]/85">예약시 메일로 더 많은 곡리스트를 제공해 드리고 있습니다.</p>
                 <AccordionContent className="px-3 pb-4">
                   <p className="px-2 pb-5 leading-8 text-[#d7ccb4]/76">곡리스트는 상담 시 예식 순서와 홀 조건에 맞춰 최종 제안됩니다.</p>
                   <div className="grid gap-3 md:grid-cols-2">
@@ -713,7 +713,7 @@ export default function Home() {
                     <AccordionItem value="repertoire" className="border-b-0">
                       <AccordionTrigger className="rounded-[1.25rem] px-4 pb-2 pt-4 text-left hover:no-underline md:px-5">
                         <span className="flex min-w-0 flex-col gap-2">
-                          <span className="text-xs font-bold uppercase tracking-[0.24em] text-[#8adfce]">More Repertoire</span>
+                          <span className="text-xs font-bold uppercase tracking-[0.24em] text-[#9ed4c0]">More Repertoire</span>
                           <span className="break-keep font-serif-kr text-lg font-semibold leading-snug text-[#fff4d8] md:text-xl">장면별 레퍼토리 더보기</span>
                         </span>
                       </AccordionTrigger>
@@ -724,11 +724,11 @@ export default function Home() {
                             <div key={group.title} className="rounded-[1.35rem] border border-white/10 bg-black/20 p-4 md:p-5">
                               <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
                                 <div>
-                                  <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#8adfce]/80">Scene {String(index + 1).padStart(2, "0")}</p>
+                                  <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#9ed4c0]/80">Scene {String(index + 1).padStart(2, "0")}</p>
                                   <h4 className="mt-1 break-keep font-serif-kr text-lg font-semibold leading-snug text-[#d9b86c]">{group.title}</h4>
                                   <p className="mt-2 break-keep text-sm leading-6 text-[#d7ccb4]/72">{group.caption}</p>
                                 </div>
-                                <span className="w-fit rounded-full border border-[#d9b86c]/22 bg-[#d9b86c]/10 px-3 py-1 text-xs font-bold text-[#8adfce]">{group.songs.length}곡 예시</span>
+                                <span className="w-fit rounded-full border border-[#d9b86c]/22 bg-[#d9b86c]/10 px-3 py-1 text-xs font-bold text-[#9ed4c0]">{group.songs.length}곡 예시</span>
                               </div>
                               <div className="mt-4 flex flex-wrap gap-2">
                                 {group.songs.map((song) => (
@@ -767,7 +767,7 @@ export default function Home() {
                     <iframe className="h-full w-full" src={video.src} title={video.title} allow="autoplay; fullscreen" allowFullScreen />
                   </AspectRatio>
                   <div className="p-3.5">
-                    <p className="text-[0.65rem] font-bold tracking-[0.18em] text-[#8adfce]">REPRESENTATIVE SAMPLE</p>
+                    <p className="text-[0.65rem] font-bold tracking-[0.18em] text-[#9ed4c0]">REPRESENTATIVE SAMPLE</p>
                     <h3 className="mt-1.5 truncate font-serif-kr text-base font-semibold text-[#fff4d8]">{video.title}</h3>
                   </div>
                 </article>
@@ -776,12 +776,12 @@ export default function Home() {
             <div className="mt-5 rounded-[1.5rem] border border-[#d9b86c]/16 bg-[#0f0b08]/55 p-4">
               <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
                 <div>
-                  <p className="text-xs font-bold tracking-[0.18em] text-[#8adfce]">MORE SAMPLE</p>
+                  <p className="text-xs font-bold tracking-[0.18em] text-[#9ed4c0]">MORE SAMPLE</p>
                   <p className="mt-1 text-sm leading-6 text-[#d7ccb4]/74">추가 샘플은 제목을 눌러 확인하실 수 있습니다.</p>
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {sampleVideos.slice(4).map((video) => (
-                    <a key={video.title} href={video.src} target="_blank" rel="noreferrer" className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-2 text-xs font-semibold text-[#efe2c8]/86 transition hover:border-[#d9b86c]/45 hover:text-[#d9fff5]">
+                    <a key={video.title} href={video.src} target="_blank" rel="noreferrer" className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-2 text-xs font-semibold text-[#efe2c8]/86 transition hover:border-[#d9b86c]/45 hover:text-[#e8f5ef]">
                       {video.title}
                     </a>
                   ))}
@@ -804,7 +804,7 @@ export default function Home() {
                 <article key={pkg.title} className="relative overflow-hidden rounded-[1.6rem] border border-[#d9b86c]/18 bg-[#120f0b] p-5 transition duration-500 hover:border-[#d9b86c]/35 hover:shadow-[0_0_30px_rgba(217,184,108,0.08)] sm:rounded-[2.2rem] sm:p-7">
                   <div className="flex items-start justify-between gap-4">
                     <div>
-                      <p className="text-sm font-bold tracking-[0.2em] text-[#8adfce]">{pkg.people}</p>
+                      <p className="text-sm font-bold tracking-[0.2em] text-[#9ed4c0]">{pkg.people}</p>
                       <h3 className="mt-3 font-display text-3xl font-semibold text-[#fff4d8]">{pkg.title}</h3>
                     </div>
                     <span className="shrink-0 whitespace-nowrap rounded-full border border-[#d9b86c]/25 bg-[#d9b86c]/10 px-3.5 py-2 text-xs font-bold text-[#d9b86c] sm:px-4 sm:text-sm">{pkg.accent}</span>
@@ -852,13 +852,13 @@ export default function Home() {
                   <div className="relative min-h-[18rem] overflow-hidden rounded-[1.85rem] border border-[#d9b86c]/22 bg-black/35 sm:min-h-[22rem] md:min-h-full">
                     <img src={managerProfile.image} alt={`${managerProfile.name} ${managerProfile.title} 프로필 사진`} className="h-full w-full object-cover object-[center_18%] transition duration-700 group-hover:scale-[1.035]" />
                     <div className="absolute inset-x-0 bottom-0 bg-[linear-gradient(180deg,transparent,rgba(9,8,6,0.88))] p-5">
-                      <p className="text-xs font-bold tracking-[0.22em] text-[#8adfce]">TEAM LEAD</p>
+                      <p className="text-xs font-bold tracking-[0.22em] text-[#9ed4c0]">TEAM LEAD</p>
                       <p className="mt-2 font-serif-kr text-2xl font-semibold text-[#fff4d8]">{managerProfile.name}</p>
                     </div>
                   </div>
                   <div className="flex flex-col justify-between rounded-[1.85rem] border border-white/10 bg-black/24 p-5 md:p-6">
                     <div>
-                      <div className="inline-flex items-center gap-2 rounded-full border border-[#d9b86c]/28 bg-[#d9b86c]/10 px-4 py-2 text-xs font-bold tracking-[0.18em] text-[#8adfce]">
+                      <div className="inline-flex items-center gap-2 rounded-full border border-[#d9b86c]/28 bg-[#d9b86c]/10 px-4 py-2 text-xs font-bold tracking-[0.18em] text-[#9ed4c0]">
                         <Crown className="h-4 w-4" />
                         Musical Team Manager
                       </div>
@@ -883,10 +883,10 @@ export default function Home() {
                     type="button"
                     onClick={() => setCastProfilesOpen((open) => !open)}
                     aria-expanded={castProfilesOpen}
-                    className="inline-flex items-center justify-center gap-2 rounded-full border border-[#d9b86c]/38 bg-[#d9b86c]/10 px-5 py-3 text-sm font-extrabold text-[#d9fff5] shadow-[0_14px_34px_rgba(0,0,0,0.24)] transition hover:border-[#d9fff5]/70 hover:bg-[#d9b86c]/16"
+                    className="inline-flex items-center justify-center gap-2 rounded-full border border-[#d9b86c]/38 bg-[#d9b86c]/10 px-5 py-3 text-sm font-extrabold text-[#e8f5ef] shadow-[0_14px_34px_rgba(0,0,0,0.24)] transition hover:border-[#e8f5ef]/70 hover:bg-[#d9b86c]/16"
                   >
                     {castProfilesOpen ? "배우 프로필 접기" : "배우 프로필 보기"}
-                    <ChevronRight className={`h-4 w-4 transition ${castProfilesOpen ? "rotate-90 text-[#8adfce]" : ""}`} />
+                    <ChevronRight className={`h-4 w-4 transition ${castProfilesOpen ? "rotate-90 text-[#9ed4c0]" : ""}`} />
                   </button>
                 </div>
                 {castProfilesOpen ? (
@@ -903,7 +903,7 @@ export default function Home() {
                         <div className="flex flex-1 flex-col justify-between pt-4">
                           <div>
                             <h4 className="font-serif-kr text-xl font-semibold leading-tight text-[#fff4d8] sm:text-2xl">{actor.name}</h4>
-                            <p className="mt-1 text-sm font-medium text-[#8adfce]">{actor.role}</p>
+                            <p className="mt-1 text-sm font-medium text-[#9ed4c0]">{actor.role}</p>
                           </div>
                           <div className="mt-4 h-px w-full bg-[linear-gradient(90deg,transparent,rgba(217,184,108,0.22),transparent)]" />
                         </div>
@@ -927,7 +927,7 @@ export default function Home() {
             <div className="mt-12 grid gap-5 md:grid-cols-3">
               {assuranceItems.map(({ title, body, icon: Icon }) => (
                 <article key={title} className="rounded-[1.4rem] border border-[#d9b86c]/16 bg-[#14100b] p-4 text-center transition duration-500 hover:border-[#d9b86c]/30 sm:rounded-[2rem] sm:p-5 md:p-8">
-                  <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full border border-[#d9b86c]/28 bg-[#d9b86c]/8 text-[#8adfce] md:h-16 md:w-16">
+                  <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full border border-[#d9b86c]/28 bg-[#d9b86c]/8 text-[#9ed4c0] md:h-16 md:w-16">
                     <Icon className="h-6 w-6 md:h-7 md:w-7" />
                   </div>
                   <h3 className="mt-5 whitespace-nowrap font-serif-kr text-base font-semibold tracking-[-0.03em] text-[#fff4d8] sm:text-lg md:text-2xl">{title}</h3>
@@ -951,7 +951,7 @@ export default function Home() {
         <section className="relative overflow-hidden py-20 md:py-28">
           <div className="container grid gap-6 lg:grid-cols-2">
             <article className="rounded-[1.4rem] border border-[#d9b86c]/24 bg-[linear-gradient(135deg,rgba(217,184,108,0.12),rgba(9,8,6,0.96))] p-5 sm:rounded-[2.2rem] sm:p-8">
-              <Mic2 className="h-8 w-8 text-[#8adfce]" />
+              <Mic2 className="h-8 w-8 text-[#9ed4c0]" />
               <p className="section-kicker mt-6">Musical Song Only</p>
               <h2 className="mt-4 font-serif-kr text-3xl font-semibold leading-tight text-[#fff4d8] md:text-4xl">
                 <span className="block sm:inline">뮤지컬 축가만 찾고</span>
@@ -1037,7 +1037,7 @@ export default function Home() {
               <AccordionItem value="additional-services" className="border-b-0">
                 <AccordionTrigger className="rounded-[1.65rem] px-5 py-5 text-left hover:no-underline">
                   <span className="flex min-w-0 flex-col gap-2">
-                    <span className="text-xs font-bold uppercase tracking-[0.24em] text-[#8adfce]">Option Line-up</span>
+                    <span className="text-xs font-bold uppercase tracking-[0.24em] text-[#9ed4c0]">Option Line-up</span>
                     <span className="break-keep font-serif-kr text-xl font-semibold leading-snug text-[#fff4d8] md:text-2xl">추가 옵션 서비스 보기</span>
                   </span>
                 </AccordionTrigger>
@@ -1053,8 +1053,8 @@ export default function Home() {
                         className="group flex min-h-[6.8rem] flex-col justify-between rounded-[1.25rem] border border-[#d9b86c]/15 bg-[linear-gradient(150deg,rgba(18,15,11,0.94),rgba(9,8,6,0.78))] p-3.5 transition duration-500 hover:-translate-y-0.5 hover:border-[#d9b86c]/45 hover:bg-[#130f0b] sm:p-4"
                       >
                         <div className="flex items-center justify-between gap-2">
-                          <span className="font-display text-[0.68rem] font-bold tracking-[0.18em] text-[#8adfce]">0{index + 1}</span>
-                          <ExternalLink className="h-3.5 w-3.5 text-[#d9b86c]/70 transition group-hover:text-[#8adfce]" />
+                          <span className="font-display text-[0.68rem] font-bold tracking-[0.18em] text-[#9ed4c0]">0{index + 1}</span>
+                          <ExternalLink className="h-3.5 w-3.5 text-[#d9b86c]/70 transition group-hover:text-[#9ed4c0]" />
                         </div>
                         <div>
                           <p className="text-[0.63rem] font-bold tracking-[0.14em] text-[#d9b86c]/72 sm:text-[0.68rem]">{service.subtitle}</p>
@@ -1073,7 +1073,7 @@ export default function Home() {
           <div className="absolute inset-0 opacity-18" style={{ backgroundImage: `url(${patternImage})`, backgroundSize: "620px", backgroundPosition: "center" }} />
           <div className="container relative z-10">
             <div className="mx-auto max-w-5xl rounded-[1.6rem] border border-[#d9b86c]/20 bg-[linear-gradient(135deg,rgba(20,16,11,0.96),rgba(9,8,6,0.92))] p-6 text-center shadow-2xl shadow-black/45 sm:rounded-[2.6rem] sm:p-8 md:p-14">
-              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full border border-[#d9b86c]/35 bg-[#d9b86c]/10 text-[#8adfce]">
+              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full border border-[#d9b86c]/35 bg-[#d9b86c]/10 text-[#9ed4c0]">
                 <MessageCircle className="h-7 w-7" />
               </div>
               <p className="section-kicker mt-8">Final Curtain</p>
