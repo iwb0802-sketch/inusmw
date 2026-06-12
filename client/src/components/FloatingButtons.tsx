@@ -103,21 +103,21 @@ export default function FloatingButtons() {
       {/* 한 줄: 영상보기 | SNS 아이콘 | 카톡상담 - 가운데 정렬 */}
       <div className="flex justify-center items-stretch px-4 pb-6 gap-2">
 
-        {/* 왼쪽: 실황영상보기 */}
+        {/* 왼쪽: 실황영상보기 - 골드 테마 */}
         <a
           href="https://blog.naver.com/PostThumbnailList.nhn?isHttpsRedirect=true&from=postList&blogId=inusmusics&categoryNo=40&currentPage=1"
           target="_blank"
           rel="noopener noreferrer"
-          className={`${visible ? 'pointer-events-auto' : 'pointer-events-none'} flex items-center gap-2 px-4 py-3 bg-[#0d0a07]/90 backdrop-blur-sm border border-[#d9b86c]/30 text-[#f8edd4] hover:bg-[#0d0a07] hover:border-[#d9b86c]/60 transition-all duration-300 shadow-lg shadow-black/20 group shrink-0`}
+          className={`${visible ? 'pointer-events-auto' : 'pointer-events-none'} flex items-center gap-2 px-4 py-3 rounded-full border border-[#d9b86c]/45 bg-[linear-gradient(135deg,rgba(20,16,11,0.96),rgba(9,8,6,0.92))] text-[#f8edd4] hover:border-[#d9b86c]/75 hover:bg-[#120f0b] transition-all duration-300 shadow-[0_8px_28px_rgba(0,0,0,0.4)] backdrop-blur-xl group shrink-0`}
         >
           <Play className="w-4 h-4 text-[#d9b86c] group-hover:scale-110 transition-transform duration-300" strokeWidth={1.5} />
-          <span className="text-xs tracking-wide" style={{ fontFamily: "'Noto Serif KR', serif" }}>
+          <span className="text-xs font-semibold tracking-wide" style={{ fontFamily: "'Noto Serif KR', serif" }}>
             실황영상보기
           </span>
         </a>
 
-        {/* 가운데: SNS 아이콘 */}
-        <div className={`${visible ? 'pointer-events-auto' : 'pointer-events-none'} flex items-center gap-0 bg-[#0d0a07]/90 backdrop-blur-sm border border-[#d9b86c]/30 shadow-lg shadow-black/20 shrink-0`}>
+        {/* 가운데: SNS 아이콘 - 골드 테마 */}
+        <div className={`${visible ? 'pointer-events-auto' : 'pointer-events-none'} flex items-center gap-0 rounded-full border border-[#d9b86c]/30 bg-[linear-gradient(135deg,rgba(20,16,11,0.96),rgba(9,8,6,0.92))] shadow-[0_8px_28px_rgba(0,0,0,0.4)] backdrop-blur-xl shrink-0 overflow-hidden`}>
           {snsLinks.map((sns, i) => (
             <a
               key={sns.label}
@@ -125,7 +125,7 @@ export default function FloatingButtons() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={sns.label}
-              className={`flex items-center justify-center w-11 h-full text-[#d9b86c]/70 hover:text-[#d9b86c] hover:bg-[#0d0a07] transition-all duration-200 active:scale-95 ${
+              className={`flex items-center justify-center w-11 h-full py-3 text-[#d9b86c]/65 hover:text-[#d9b86c] hover:bg-[#d9b86c]/10 transition-all duration-200 active:scale-95 ${
                 i < snsLinks.length - 1 ? "border-r border-[#d9b86c]/15" : ""
               }`}
             >
@@ -137,15 +137,15 @@ export default function FloatingButtons() {
           ))}
         </div>
 
-        {/* 오른쪽: 카톡상담하기 - 카카오 노란색 유지 */}
+        {/* 오른쪽: 카톡상담하기 - 민트 테마 (홈페이지 CTA 색상) */}
         <a
           href="https://pf.kakao.com/_wxovaM/chat"
           target="_blank"
           rel="noopener noreferrer"
-          className={`${visible ? 'pointer-events-auto' : 'pointer-events-none'} flex items-center gap-2 px-4 py-3 bg-[#fee500] text-[#1a1207] hover:bg-[#ffd700] transition-all duration-300 shadow-lg shadow-black/20 group shrink-0`}
+          className={`${visible ? 'pointer-events-auto' : 'pointer-events-none'} flex items-center gap-2 px-4 py-3 rounded-full border border-[#8adfce]/70 bg-[linear-gradient(135deg,#6ed9c7_0%,#d9fff5_48%,#8adfce_100%)] text-[#06110f] hover:brightness-110 transition-all duration-300 shadow-[0_8px_28px_rgba(138,223,206,0.25)] group shrink-0`}
         >
           <MessageCircle className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" strokeWidth={1.5} />
-          <span className="text-xs tracking-wide font-medium" style={{ fontFamily: "'Noto Serif KR', serif" }}>
+          <span className="text-xs font-extrabold tracking-wide" style={{ fontFamily: "'Noto Serif KR', serif" }}>
             카톡상담하기
           </span>
         </a>
