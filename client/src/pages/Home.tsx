@@ -505,7 +505,7 @@ export default function Home() {
 
 
           </div>
-          <a href="#details" className="absolute bottom-7 left-1/2 z-20 flex -translate-x-1/2 flex-col items-center gap-3 text-[0.66rem] font-bold uppercase tracking-[0.26em] text-[#8adfce]/86 transition hover:text-[#d9fff5]" aria-label="아래 내용으로 스크롤">
+          <a href="#details" className="absolute bottom-7 left-1/2 z-20 flex -translate-x-1/2 flex-col items-center gap-3 text-[0.66rem] font-bold uppercase tracking-[0.26em] text-[#d9b86c]/75 transition hover:text-[#d9b86c]" aria-label="아래 내용으로 스크롤">
             <span>Scroll</span>
             <span className="relative h-11 w-px overflow-hidden bg-[#d9b86c]/25 after:absolute after:left-0 after:top-0 after:h-5 after:w-px after:animate-[scrollCue_1.8s_ease-in-out_infinite] after:bg-[#d9b86c]" />
           </a>
