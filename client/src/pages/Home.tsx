@@ -363,8 +363,8 @@ function SectionTitle({
 function ConsultationButton({ children, variant = "mint" }: { children: string; variant?: "mint" | "outline" }) {
   const className =
     variant === "mint"
-      ? "w-full rounded-full border border-[#d9b86c]/70 bg-[linear-gradient(135deg,#d4956a_0%,#f5dfc0_48%,#d9b86c_100%)] px-5 py-4 text-sm font-extrabold text-[#1a0e06] shadow-[0_18px_42px_rgba(217,184,108,0.24)] transition hover:border-[#fff4d8]/90 hover:brightness-110 sm:w-auto sm:px-7 sm:py-6 sm:text-base"
-      : "w-full rounded-full border-[#d9b86c]/48 bg-[#0f0b08]/70 px-5 py-4 text-sm font-bold text-[#f8edd4] hover:border-[#d9b86c]/75 hover:bg-[#d9b86c]/10 hover:text-white sm:w-auto sm:px-7 sm:py-6 sm:text-base";
+      ? "w-full rounded-lg border border-[#d9b86c] bg-transparent px-5 py-4 text-sm font-bold text-white transition hover:bg-[#d9b86c]/10 hover:text-white sm:w-auto sm:px-7 sm:py-6 sm:text-base"
+      : "w-full rounded-lg border border-[#d9b86c]/48 bg-[#0f0b08]/70 px-5 py-4 text-sm font-bold text-[#f8edd4] hover:border-[#d9b86c]/75 hover:bg-[#d9b86c]/10 hover:text-white sm:w-auto sm:px-7 sm:py-6 sm:text-base";
 
   return (
     <Button asChild type="button" size="lg" variant={variant === "mint" ? "default" : "outline"} className={className}>
@@ -383,8 +383,8 @@ function ExternalButton({ href, children, variant = "outline" }: { href: string;
       variant={variant === "mint" ? "default" : "outline"}
       className={
         variant === "mint"
-          ? "rounded-full bg-[linear-gradient(135deg,#d4956a,#d9b86c)] px-6 py-5 text-sm font-extrabold text-[#1a0e06] hover:brightness-110"
-          : "rounded-full border-[#d9b86c]/40 bg-black/20 px-6 py-5 text-sm font-bold text-[#f8edd4] hover:bg-[#d9b86c]/10 hover:text-white"
+          ? "rounded-lg border border-[#d9b86c] bg-transparent px-6 py-5 text-sm font-bold text-white hover:bg-[#d9b86c]/10 hover:text-white"
+          : "rounded-lg border border-[#d9b86c]/40 bg-transparent px-6 py-5 text-sm font-bold text-[#f8edd4] hover:border-[#d9b86c]/70 hover:text-white"
       }
     >
       <a href={href} target="_blank" rel="noreferrer">
@@ -533,7 +533,7 @@ export default function Home() {
               </p>
               <div className="mt-7 flex w-full max-w-md flex-col items-center justify-center gap-3 sm:mt-10 sm:max-w-none sm:flex-row sm:gap-4">
                 <ConsultationButton>카카오톡 상담요청하기</ConsultationButton>
-                <Button asChild size="lg" className="w-full rounded-full border border-[#d9b86c]/55 bg-[linear-gradient(135deg,rgba(9,8,6,0.94),rgba(217,184,108,0.16))] px-5 py-4 text-sm font-extrabold text-[#f8edd4] shadow-[0_16px_36px_rgba(0,0,0,0.28)] transition hover:border-[#fff4d8]/75 hover:bg-[#d9b86c]/12 hover:text-white sm:w-auto sm:px-7 sm:py-6 sm:text-base">
+                <Button asChild size="lg" className="w-full rounded-lg border border-[#d9b86c] bg-transparent px-5 py-4 text-sm font-bold text-white transition hover:bg-[#d9b86c]/10 hover:text-white sm:w-auto sm:px-7 sm:py-6 sm:text-base">
                   <a href="#details">자세한 내용 보기</a>
                 </Button>
               </div>
@@ -584,7 +584,7 @@ export default function Home() {
                   </div>
                 ))}
               </div>
-              <div id="package" className="mt-6 rounded-[1.9rem] border border-[#d9b86c]/30 bg-[radial-gradient(circle_at_12%_18%,rgba(217,184,108,0.2),transparent_32%),linear-gradient(135deg,rgba(31,22,13,0.98),rgba(11,9,7,0.96)_48%,rgba(70,42,24,0.72))] p-6 shadow-[0_24px_70px_rgba(0,0,0,0.34),inset_0_1px_0_rgba(255,244,216,0.08)]">
+              <div id="package" className="mt-6 rounded-[1.9rem] border border-[#d9b86c]/30 bg-[#0d0a07] p-6">
                 <p className="section-kicker">Complete Wedding Package</p>
                 <h3 className="mt-3 font-serif-kr text-2xl font-semibold text-[#fff4d8]">완성형 웨딩 패키지</h3>
                 <p className="mt-4 text-[0.95rem] leading-7 text-[#efe2c8]/86 md:text-base md:leading-8">
@@ -664,7 +664,7 @@ export default function Home() {
             />
 
             <div className="mt-10 grid gap-5 lg:grid-cols-[1.05fr_0.95fr]">
-              <div className="rounded-[2rem] border border-[#d9b86c]/16 bg-[linear-gradient(145deg,rgba(18,15,11,0.96),rgba(9,8,6,0.92))] p-4 md:p-5">
+              <div className="rounded-[2rem] border border-[#d9b86c]/16 bg-[#0d0a07] p-4 md:p-5">
                 <div className="flex items-end justify-between gap-4 border-b border-[#d9b86c]/12 pb-4">
                   <div>
                     <p className="section-kicker">Wedding Flow</p>
@@ -745,7 +745,7 @@ export default function Home() {
                     ))}
                   </div>
 
-                  <Accordion type="single" collapsible className="mt-5 rounded-[1.5rem] border border-[#d9b86c]/18 bg-[linear-gradient(145deg,rgba(28,20,11,0.76),rgba(14,11,8,0.92))] p-2 shadow-[0_18px_60px_rgba(0,0,0,0.16)]">
+                  <Accordion type="single" collapsible className="mt-5 rounded-[1.5rem] border border-[#d9b86c]/18 bg-[#0d0a07] p-2">
                     <AccordionItem value="repertoire" className="border-b-0">
                       <AccordionTrigger className="rounded-[1.25rem] px-4 pb-2 pt-4 text-left hover:no-underline md:px-5">
                         <span className="flex min-w-0 flex-col gap-2">
@@ -880,7 +880,7 @@ export default function Home() {
               compact
             />
             <div className="mt-12 grid gap-6 lg:grid-cols-[0.92fr_1.08fr]">
-              <article className="group relative overflow-hidden rounded-[1.5rem] border border-[#d9b86c]/24 bg-[linear-gradient(145deg,rgba(217,184,108,0.14),rgba(18,15,11,0.97))] p-3 shadow-[0_24px_70px_rgba(0,0,0,0.34)] sm:rounded-[2.3rem] sm:p-4 md:p-6">
+              <article className="group relative overflow-hidden rounded-[1.5rem] border border-[#d9b86c]/24 bg-[#0d0a07] p-3 sm:rounded-[2.3rem] sm:p-4 md:p-6">
                 <div className="grid gap-6 md:grid-cols-[0.88fr_1.12fr] md:items-stretch">
                   <div className="relative min-h-[18rem] overflow-hidden rounded-[1.85rem] border border-[#d9b86c]/22 bg-black/35 sm:min-h-[22rem] md:min-h-full">
                     <img src={managerProfile.image} alt={`${managerProfile.name} ${managerProfile.title} 프로필 사진`} className="h-full w-full object-cover object-[center_18%] transition duration-700 group-hover:scale-[1.035]" />
@@ -906,7 +906,7 @@ export default function Home() {
                   </div>
                 </div>
               </article>
-              <div className="rounded-[1.5rem] border border-[#d9b86c]/18 bg-[linear-gradient(145deg,rgba(217,184,108,0.08),rgba(19,15,11,0.95))] p-3.5 sm:rounded-[2.3rem] sm:p-5 md:p-7">
+              <div className="rounded-[1.5rem] border border-[#d9b86c]/18 bg-[#0d0a07] p-3.5 sm:rounded-[2.3rem] sm:p-5 md:p-7">
                 <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
                   <div>
                     <p className="section-kicker">Musical Cast</p>
@@ -925,7 +925,7 @@ export default function Home() {
                 {castProfilesOpen ? (
                   <div className="mt-7 grid grid-cols-2 items-stretch gap-3 sm:gap-4 md:grid-cols-3">
                     {actorCastProfiles.map((actor) => (
-                      <article key={actor.name} className="group flex h-full flex-col rounded-[1.65rem] border border-[#d9b86c]/14 bg-[linear-gradient(180deg,rgba(17,12,7,0.94),rgba(9,8,6,0.8))] p-2.5 text-center shadow-[0_18px_46px_rgba(0,0,0,0.22)] transition duration-500 hover:-translate-y-1 hover:border-[#d9b86c]/42 hover:bg-[#130f0b] sm:p-3">
+                      <article key={actor.name} className="group flex h-full flex-col rounded-[1.65rem] border border-[#d9b86c]/14 bg-[#0d0a07] p-2.5 text-center shadow-[0_18px_46px_rgba(0,0,0,0.22)] transition duration-500 hover:-translate-y-1 hover:border-[#d9b86c]/42 hover:bg-[#130f0b] sm:p-3">
                         <div className="relative aspect-[4/5] overflow-hidden rounded-[1.32rem] border border-[#d9b86c]/30 bg-[#050705] shadow-[inset_0_0_0_1px_rgba(255,255,255,0.05),0_20px_34px_rgba(0,0,0,0.28)]">
                           <img
                             src={actor.image}
@@ -968,11 +968,11 @@ export default function Home() {
                 </article>
               ))}
             </div>
-            <div className="mt-10 rounded-[1.4rem] border border-[#d9b86c]/35 bg-[linear-gradient(135deg,rgba(217,184,108,0.2),rgba(16,23,19,0.94))] p-4 shadow-[0_0_45px_rgba(217,184,108,0.12)] sm:rounded-[2.2rem] sm:p-5 md:p-7">
+            <div className="mt-10 rounded-[1.4rem] border border-[#d9b86c]/20 bg-[#0d0a07] p-4 sm:rounded-[2.2rem] sm:p-5 md:p-7">
               <p className="section-kicker text-center">Inus Quick Links</p>
               <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
                 {quickLinks.map(([label, href]) => (
-                  <a key={label} href={href} target="_blank" rel="noreferrer" className="group flex min-h-16 items-center justify-center rounded-[1.25rem] border border-[#d9b86c]/22 bg-[linear-gradient(135deg,rgba(9,8,6,0.72),rgba(217,184,108,0.08))] px-4 py-4 text-center font-serif-kr text-base font-semibold text-[#fff4d8] shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] transition hover:-translate-y-0.5 hover:border-[#d9b86c]/45 hover:bg-[#d9b86c]/10 md:text-lg">
+                  <a key={label} href={href} target="_blank" rel="noreferrer" className="group flex min-h-16 items-center justify-center rounded-[1.25rem] border border-[#d9b86c]/30 bg-transparent px-4 py-4 text-center font-serif-kr text-base font-semibold text-white transition hover:-translate-y-0.5 hover:border-[#d9b86c]/60 hover:bg-[#d9b86c]/8 md:text-lg">
                     <span>{label}</span>
                   </a>
                 ))}
@@ -983,7 +983,7 @@ export default function Home() {
 
         <section className="relative overflow-hidden py-20 md:py-28">
           <div className="container grid gap-6 lg:grid-cols-2">
-            <article className="rounded-[1.4rem] border border-[#d9b86c]/24 bg-[linear-gradient(135deg,rgba(217,184,108,0.12),rgba(9,8,6,0.96))] p-5 sm:rounded-[2.2rem] sm:p-8">
+            <article className="rounded-[1.4rem] border border-[#d9b86c]/24 bg-[#0d0a07] p-5 sm:rounded-[2.2rem] sm:p-8">
               <Mic2 className="h-8 w-8 text-[#9ed4c0]" />
               <p className="section-kicker mt-6">Musical Song Only</p>
               <h2 className="mt-4 font-serif-kr text-3xl font-semibold leading-tight text-[#fff4d8] md:text-4xl">
@@ -996,7 +996,7 @@ export default function Home() {
                 <ExternalButton href={musicalSongUrl} variant="mint">뮤지컬축가 안내 보기</ExternalButton>
               </div>
             </article>
-            <article className="rounded-[1.4rem] border border-[#d9b86c]/22 bg-[linear-gradient(135deg,rgba(217,184,108,0.13),rgba(9,8,6,0.96))] p-5 sm:rounded-[2.2rem] sm:p-8">
+            <article className="rounded-[1.4rem] border border-[#d9b86c]/22 bg-[#0d0a07] p-5 sm:rounded-[2.2rem] sm:p-8">
               <Gift className="h-8 w-8 text-[#d9b86c]" />
               <p className="section-kicker mt-6">Special Event</p>
               <h2 className="mt-4 font-serif-kr text-3xl font-semibold leading-tight text-[#fff4d8] md:text-4xl">
@@ -1064,7 +1064,7 @@ export default function Home() {
               align="center"
               compact
             />
-            <Accordion type="single" collapsible className="mx-auto mt-10 max-w-5xl rounded-[1.4rem] border border-[#d9b86c]/18 bg-[linear-gradient(135deg,rgba(7,17,15,0.88),rgba(18,15,11,0.94))] p-2.5 shadow-[0_24px_70px_rgba(0,0,0,0.28)] sm:rounded-[2.2rem] sm:p-4 md:p-5">
+            <Accordion type="single" collapsible className="mx-auto mt-10 max-w-5xl rounded-[1.4rem] border border-[#d9b86c]/18 bg-[#0d0a07] p-2.5 sm:rounded-[2.2rem] sm:p-4 md:p-5">
               <AccordionItem value="additional-services" className="border-b-0">
                 <AccordionTrigger className="rounded-[1.65rem] px-5 py-5 text-left hover:no-underline">
                   <span className="flex min-w-0 flex-col gap-2">
@@ -1081,7 +1081,7 @@ export default function Home() {
                         href={service.href}
                         target="_blank"
                         rel="noreferrer"
-                        className="group flex min-h-[6.8rem] flex-col justify-between rounded-[1.25rem] border border-[#d9b86c]/15 bg-[linear-gradient(150deg,rgba(18,15,11,0.94),rgba(9,8,6,0.78))] p-3.5 transition duration-500 hover:-translate-y-0.5 hover:border-[#d9b86c]/45 hover:bg-[#130f0b] sm:p-4"
+                        className="group flex min-h-[6.8rem] flex-col justify-between rounded-[1.25rem] border border-[#d9b86c]/15 bg-[#0d0a07] p-3.5 transition duration-500 hover:-translate-y-0.5 hover:border-[#d9b86c]/45 hover:bg-[#130f0b] sm:p-4"
                       >
                         <div className="flex items-center justify-between gap-2">
                           <span className="font-display text-[0.68rem] font-bold tracking-[0.18em] text-[#9ed4c0]">0{index + 1}</span>
@@ -1103,7 +1103,7 @@ export default function Home() {
         <section id="consult" className="relative overflow-hidden border-t border-[#d9b86c]/12 bg-[#090806] py-20 md:py-28">
           <div className="absolute inset-0 opacity-18" style={{ backgroundImage: `url(${patternImage})`, backgroundSize: "620px", backgroundPosition: "center" }} />
           <div className="container relative z-10">
-            <div className="mx-auto max-w-5xl rounded-[1.6rem] border border-[#d9b86c]/20 bg-[linear-gradient(135deg,rgba(20,16,11,0.96),rgba(9,8,6,0.92))] p-6 text-center shadow-2xl shadow-black/45 sm:rounded-[2.6rem] sm:p-8 md:p-14">
+            <div className="mx-auto max-w-5xl rounded-[1.6rem] border border-[#d9b86c]/20 bg-[#0d0a07] p-6 text-center sm:rounded-[2.6rem] sm:p-8 md:p-14">
               <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full border border-[#d9b86c]/35 bg-[#d9b86c]/10 text-[#9ed4c0]">
                 <MessageCircle className="h-7 w-7" />
               </div>
