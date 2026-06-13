@@ -66,13 +66,13 @@ export default function InusCardPopup() {
 
       {/* 펼쳐진 카드 */}
       <div
-        className={`overflow-hidden transition-all duration-300 ease-out origin-top-left ${
-          expanded ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0"
+        className={`transition-all duration-300 ease-out origin-top-left ${
+          expanded ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none max-h-0 overflow-hidden"
         }`}
       >
         <div
-          className="rounded-2xl border border-[#d9b86c]/25 bg-[#0f0c09] shadow-2xl shadow-black/60 overflow-hidden"
-          style={{ width: "min(340px, calc(100vw - 2rem))" }}
+          className="rounded-2xl border border-[#d9b86c]/25 bg-[#0f0c09] shadow-2xl shadow-black/60 overflow-y-auto"
+          style={{ width: "min(340px, calc(100vw - 2rem))", maxHeight: "calc(100dvh - 7rem)" }}
         >
           {/* 헤더 */}
           <div className="px-5 pt-5 pb-4 border-b border-[#d9b86c]/12">
