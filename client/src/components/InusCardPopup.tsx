@@ -74,15 +74,6 @@ export default function InusCardPopup() {
           className="rounded-2xl border border-[#d9b86c]/25 bg-[#0f0c09] shadow-2xl shadow-black/60 overflow-hidden"
           style={{ width: "min(340px, calc(100vw - 2rem))" }}
         >
-          {/* 청첩장 이미지 */}
-          <a href={INUSCARD_URL} target="_blank" rel="noopener noreferrer">
-            <img
-              src={POPUP_IMG}
-              alt="이너스뮤직 모바일 청첩장"
-              className="w-full block rounded-t-2xl"
-            />
-          </a>
-
           {/* 헤더 */}
           <div className="px-5 pt-5 pb-4 border-b border-[#d9b86c]/12">
             <p className="text-[10px] tracking-[0.22em] uppercase text-[#9ed4c0] font-bold mb-1.5">Mobile Invitation</p>
@@ -109,7 +100,15 @@ export default function InusCardPopup() {
           </div>
 
           {/* CTA */}
-          <div className="px-5 pb-5">
+          <div className="px-5 pb-5 space-y-3">
+            {/* 참고 이미지 */}
+            <a href={INUSCARD_URL} target="_blank" rel="noopener noreferrer" className="block">
+              <img
+                src={POPUP_IMG}
+                alt="모바일 청첩장 미리보기"
+                className="w-full rounded-lg border border-[#d9b86c]/20 object-cover max-h-40"
+              />
+            </a>
             <a
               href={INUSCARD_URL}
               target="_blank"
