@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { X, ChevronDown, ChevronUp } from "lucide-react";
 
+const POPUP_IMG = "/images/popup-inuscard.png";
 const INUSCARD_URL = "https://inuscard.com";
 const STORAGE_KEY = "inuscard_popup_closed_v2";
 
@@ -73,6 +74,15 @@ export default function InusCardPopup() {
           className="rounded-2xl border border-[#d9b86c]/25 bg-[#0f0c09] shadow-2xl shadow-black/60 overflow-hidden"
           style={{ width: "min(340px, calc(100vw - 2rem))" }}
         >
+          {/* 청첩장 이미지 */}
+          <a href={INUSCARD_URL} target="_blank" rel="noopener noreferrer">
+            <img
+              src={POPUP_IMG}
+              alt="이너스뮤직 모바일 청첩장"
+              className="w-full block rounded-t-2xl"
+            />
+          </a>
+
           {/* 헤더 */}
           <div className="px-5 pt-5 pb-4 border-b border-[#d9b86c]/12">
             <p className="text-[10px] tracking-[0.22em] uppercase text-[#9ed4c0] font-bold mb-1.5">Mobile Invitation</p>
