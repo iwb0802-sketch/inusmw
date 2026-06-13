@@ -31,8 +31,7 @@ import {
 } from "lucide-react";
 
 const heroImage = "/images/hero-performance.jpg";
-const microphoneImage =
-  "https://d2xsxph8kpxj0f.cloudfront.net/310519663600657495/QvBn3XoVSZ7dCLckkzSdvB/inus_gold_microphone_detail-KjPgk33rsvS9qAceb4JQnJ.webp";
+const microphoneImage = "/images/performance-stage.jpg";
 const patternImage =
   "https://d2xsxph8kpxj0f.cloudfront.net/310519663600657495/QvBn3XoVSZ7dCLckkzSdvB/inus_mint_gold_music_pattern-6kYtATfLAYnC6TFQDzMUqi.webp";
 
@@ -558,7 +557,7 @@ export default function Home() {
           <div className="absolute right-0 top-0 h-full w-1/2 opacity-10" style={{ backgroundImage: `url(${patternImage})`, backgroundSize: "cover" }} />
           <div className="container relative z-10 grid items-center gap-12 lg:grid-cols-[0.92fr_1.08fr]">
             <div className="relative overflow-hidden rounded-[2.5rem] border border-[#d9b86c]/20 bg-[#100d0a] p-4 shadow-2xl shadow-black/40">
-              <img src={microphoneImage} alt="골드 톤 마이크 디테일" className="h-[28rem] w-full rounded-[2rem] object-cover" />
+              <img src={microphoneImage} alt="이너스뮤직 뮤지컬웨딩 공연" className="h-[28rem] w-full rounded-[2rem] object-cover object-[center_30%] scale-110" />
               <div className="absolute bottom-8 left-8 right-8 rounded-[1.4rem] border border-white/12 bg-black/55 p-5 backdrop-blur-md">
                 <p className="font-serif-kr text-lg font-semibold text-[#fff4d8] sm:text-2xl"><span className="block sm:inline">주인공은 배우가 아니라</span> <span className="block sm:inline">두 분입니다.</span></p>
                 <p className="mt-3 text-sm leading-7 text-[#d7ccb4]/78">공연의 화려함을 웨딩의 품격 안으로 절제해 넣습니다.</p>
