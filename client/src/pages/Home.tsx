@@ -418,6 +418,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-[#090806] text-[#f8edd4]">
+      <InusCardPopup />
       <header className="fixed inset-x-0 top-0 z-50 border-b border-[#d9b86c]/10 bg-[#090806]/80 backdrop-blur-xl">
         <div className="container relative flex h-[4.75rem] items-center justify-between py-4 pr-24 lg:pr-0">
           <a href="#top" className="flex min-w-0 items-center gap-2.5 sm:gap-3" aria-label="이너스뮤직 뮤지컬웨딩 홈으로 이동">
