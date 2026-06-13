@@ -363,7 +363,7 @@ function SectionTitle({
 function ConsultationButton({ children, variant = "mint" }: { children: string; variant?: "mint" | "outline" }) {
   const className =
     variant === "mint"
-      ? "w-full rounded-lg border border-[#f0e6c8] bg-[#f0e6c8] px-5 py-4 text-sm font-bold text-[#1a0e06] transition hover:bg-[#fff4d8] hover:border-[#fff4d8] sm:w-auto sm:px-7 sm:py-6 sm:text-base"
+      ? "w-full rounded-lg border border-[#9ed4c0] bg-[#9ed4c0] px-5 py-4 text-sm font-bold text-[#0d2a24] transition hover:bg-[#b2ddd2] hover:border-[#b2ddd2] sm:w-auto sm:px-7 sm:py-6 sm:text-base"
       : "w-full rounded-lg border border-[#d9b86c]/48 bg-[#0f0b08]/70 px-5 py-4 text-sm font-bold text-[#f8edd4] hover:border-[#d9b86c]/75 hover:bg-[#d9b86c]/10 hover:text-white sm:w-auto sm:px-7 sm:py-6 sm:text-base";
 
   return (
