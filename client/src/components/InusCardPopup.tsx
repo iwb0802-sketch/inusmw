@@ -107,7 +107,7 @@ export default function InusCardPopup() {
                 src={POPUP_IMG}
                 alt="모바일 청첩장 미리보기"
                 className="w-full rounded-lg border border-[#d9b86c]/20 object-contain"
-                style={{ maxHeight: "260px" }}
+                style={{ maxHeight: "320px" }}
               />
             </a>
             <a
