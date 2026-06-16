@@ -9,6 +9,7 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Button } from "@/components/ui/button";
 import InusCardPopup from "@/components/InusCardPopup";
 import FloatingButtons from "@/components/FloatingButtons";
+import QuickNav from "@/components/musical/QuickNav";
 import { useEffect, useRef, useState } from "react";
 import {
   Award,
@@ -1126,6 +1127,7 @@ export default function Home() {
         </section>
 
         <FloatingButtons />
+        <QuickNav />
       </main>
 
       <footer className="border-t border-[#d9b86c]/10 bg-[#070604] py-10">
