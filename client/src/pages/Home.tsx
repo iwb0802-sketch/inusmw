@@ -32,11 +32,11 @@ import {
 } from "lucide-react";
 
 const heroImage =
-  "https://d2xsxph8kpxj0f.cloudfront.net/310519663600657495/QvBn3XoVSZ7dCLckkzSdvB/hero_candidate_A-dedcMMEv2BSroRSaouSBje.webp";
+  "/images/hero_candidate_A.webp";
 const microphoneImage =
-  "https://d2xsxph8kpxj0f.cloudfront.net/310519663600657495/QvBn3XoVSZ7dCLckkzSdvB/inus_gold_microphone_detail-KjPgk33rsvS9qAceb4JQnJ.webp";
+  "/images/inus_gold_microphone_detail.webp";
 const patternImage =
-  "https://d2xsxph8kpxj0f.cloudfront.net/310519663600657495/QvBn3XoVSZ7dCLckkzSdvB/inus_mint_gold_music_pattern-6kYtATfLAYnC6TFQDzMUqi.webp";
+  "/images/inus_mint_gold_music_pattern.webp";
 
 const kakaoChatUrl = "https://pf.kakao.com/_wxovaM/chat";
 const packageUrl = "https://blog.naver.com/inusmusics/220652965646";
