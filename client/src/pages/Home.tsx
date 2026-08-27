@@ -257,9 +257,7 @@ const assuranceItems = [
 
 const quickLinks = [
   ["더 많은 영상보기", videoArchiveUrl],
-  ["이너스 예약하기", "https://blog.naver.com/inusmusics/223023961320"],
   ["후기글 보기", "https://blog.naver.com/inusmusics/223023835728"],
-  ["이너스 진행이력", "https://blog.naver.com/inusmusics/221231802647"],
   ["이너스 예약현황", "http://inusmusics.dothome.co.kr/xe/board_nOmW18/"],
 ];
 
@@ -1013,9 +1011,9 @@ export default function Home() {
             </div>
             <div className="mt-10 rounded-[1.4rem] border border-[#d9b86c]/20 bg-[#0d0a07] p-4 sm:rounded-[2.2rem] sm:p-5 md:p-7">
               <p className="section-kicker text-center">Inus Quick Links</p>
-              <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
+              <div className="mx-auto mt-6 grid max-w-3xl gap-3 sm:grid-cols-3 sm:gap-4">
                 {quickLinks.map(([label, href]) => (
-                  <a key={label} href={href} target="_blank" rel="noreferrer" className="group flex min-h-16 items-center justify-center rounded-[1.25rem] border border-[#d9b86c]/30 bg-transparent px-4 py-4 text-center font-serif-kr text-base font-semibold text-white transition hover:-translate-y-0.5 hover:border-[#d9b86c]/60 hover:bg-[#d9b86c]/8 md:text-lg">
+                  <a key={label} href={href} target="_blank" rel="noreferrer" className="group flex min-h-[4.5rem] items-center justify-center rounded-[1.35rem] border border-[#d9b86c]/30 bg-transparent px-5 py-5 text-center font-serif-kr text-base font-semibold text-white transition hover:-translate-y-0.5 hover:border-[#d9b86c]/60 hover:bg-[#d9b86c]/8 sm:min-h-[5.5rem] md:text-lg">
                     <span>{label}</span>
                   </a>
                 ))}
