@@ -604,8 +604,8 @@ export default function Home() {
             <style>{`
               @keyframes mw-marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
               @keyframes mw-marquee2 { 0% { transform: translateX(-50%); } 100% { transform: translateX(0); } }
-              .mw-marquee-track { display: flex; width: max-content; animation: mw-marquee 220s linear infinite; }
-              .mw-marquee-track2 { display: flex; width: max-content; animation: mw-marquee2 220s linear infinite; }
+              .mw-marquee-track { display: flex; width: max-content; animation: mw-marquee 300s linear infinite; }
+              .mw-marquee-track2 { display: flex; width: max-content; animation: mw-marquee2 300s linear infinite; }
               .mw-marquee-track:hover, .mw-marquee-track2:hover { animation-play-state: paused; }
             `}</style>
             <div className="mw-marquee-track mb-3">
