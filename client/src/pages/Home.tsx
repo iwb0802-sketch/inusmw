@@ -27,7 +27,6 @@ import {
   Music2,
   ShieldCheck,
   Sparkles,
-  Users,
   X,
 } from "lucide-react";
 
@@ -65,7 +64,7 @@ const serviceDropdownItems = [
 const trustPoints = [
   { value: "0%", label: "현재까지 당일 펑크율", caption: "배우 배정과 예식 전 확인 절차를 기준으로 안정적인 진행을 우선합니다.", icon: ShieldCheck },
   { value: "10년+", label: "뮤지컬웨딩 운영 경험", caption: "웨딩홀, 예식 순서, 동선에 맞춘 현장형 연출 노하우를 축적했습니다.", icon: Award },
-  { value: "20명+", label: "전공·현역 배우 인력풀", caption: "포트폴리오와 실력 검증을 거친 배우진을 예식에 맞춰 배정합니다.", icon: Users },
+  { value: "2000+", label: "누적 본식 후기", caption: "실제 예식을 마친 신랑신부님들이 남긴 후기로 검증된 진행입니다.", icon: MessageCircle },
 ];
 
 const concerns = [
