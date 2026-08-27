@@ -12,6 +12,7 @@ const menuItems = [
   { id: "reviews",     label: "후기" },
   { id: "composition", label: "구성" },
   { id: "pricing",     label: "요금" },
+  { id: "package",     label: "패키지" },
   { id: "profiles",    label: "아티스트" },
   { id: "qna",         label: "Q&A" },
   { id: "consult",     label: "상담" },

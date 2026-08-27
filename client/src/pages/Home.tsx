@@ -580,20 +580,6 @@ export default function Home() {
                   </div>
                 ))}
               </div>
-              <div id="package" className="mt-6 rounded-[1.9rem] border border-[#d9b86c]/30 bg-[#0d0a07] p-6">
-                <p className="section-kicker">Complete Wedding Package</p>
-                <h3 className="mt-3 font-serif-kr text-2xl font-semibold text-[#fff4d8]">완성형 웨딩 패키지</h3>
-                <p className="mt-4 text-[0.95rem] leading-7 text-[#efe2c8]/86 md:text-base md:leading-8">
-                  <span className="block sm:inline">사회 · 축가 · 연주 ·</span>
-                  <span className="block sm:ml-1 sm:inline">뮤지컬웨딩을</span>
-                  <span className="block">각각 따로 준비하지 마세요.</span>
-                  <span className="mt-1 block text-[#fff4d8]">하나로 설계될 때</span>
-                  <span className="block">예식의 흐름과 완성도가 달라집니다.</span>
-                </p>
-                <div className="mt-5">
-                  <ExternalButton href={packageUrl} variant="mint">완성형 웨딩 패키지 보기</ExternalButton>
-                </div>
-              </div>
             </div>
           </div>
         </section>
@@ -903,6 +889,26 @@ export default function Home() {
                 곡과 동선에 따라 추가 비용이<br className="sm:hidden" />
                 발생할 수 있어 상담 후 확정됩니다.
               </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="package" className="scroll-mt-24 border-y border-[#d9b86c]/10 bg-[#0d0a07] py-20 md:py-28">
+          <div className="container">
+            <div className="mx-auto max-w-3xl rounded-[1.9rem] border border-[#d9b86c]/30 bg-[#120f0b]/88 p-7 text-center md:p-10">
+              <p className="section-kicker">Complete Wedding Package</p>
+              <h3 className="mt-3 font-serif-kr text-2xl font-semibold text-[#fff4d8] md:text-3xl">완성형 웨딩 패키지</h3>
+              <p className="mt-5 text-[0.95rem] leading-7 text-[#efe2c8]/86 md:text-base md:leading-8">
+                <span className="block sm:inline">사회 · 축가 · 연주 ·</span>
+                <span className="block sm:ml-1 sm:inline">뮤지컬웨딩을</span>
+                <span className="block">각각 따로 준비하지 마세요.</span>
+                <span className="mt-1 block text-[#fff4d8]">하나로 설계될 때</span>
+                <span className="block">예식의 흐름과 완성도가 달라집니다.</span>
+              </p>
+              <div className="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row">
+                <ConsultationButton>카톡으로 패키지 상담하기</ConsultationButton>
+                <ExternalButton href={packageUrl}>패키지 상세 보기</ExternalButton>
+              </div>
             </div>
           </div>
         </section>
