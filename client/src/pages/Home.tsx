@@ -258,7 +258,7 @@ const assuranceItems = [
 const quickLinks = [
   ["더 많은 영상보기", videoArchiveUrl],
   ["후기글 보기", "https://blog.naver.com/inusmusics/223023835728"],
-  ["이너스 예약현황", "http://inusmusics.dothome.co.kr/xe/board_nOmW18/"],
+  ["이너스 예약현황", "https://www.inusmc.co.kr/weekend-performance"],
 ];
 
 const additionalOptionServices = [
