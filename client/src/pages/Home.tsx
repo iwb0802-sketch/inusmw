@@ -648,6 +648,30 @@ export default function Home() {
                 );
               })}
             </div>
+
+            <div className="mt-10 border-t border-[#d9b86c]/12 pt-8">
+              <p className="section-kicker text-center">Musical Sample</p>
+              <h3 className="mt-3 text-center font-serif-kr text-xl font-semibold text-[#fff4d8] md:text-2xl">뮤지컬 샘플영상 보기</h3>
+              <div className="mt-6 grid grid-cols-2 gap-2.5 sm:gap-3 lg:grid-cols-4">
+                {sampleVideos.slice(0, 4).map((video) => (
+                  <article key={video.title} className="overflow-hidden rounded-[0.95rem] border border-[#d9b86c]/14 bg-[#120f0b] shadow-lg shadow-black/18 sm:rounded-[1.25rem]">
+                    <AspectRatio ratio={16 / 9}>
+                      <NaverThumbnail src={video.src} title={video.title} />
+                    </AspectRatio>
+                    <div className="px-2.5 py-2.5">
+                      <h4 className="truncate font-serif-kr text-[0.82rem] font-semibold text-[#fff4d8] sm:text-sm">{video.title}</h4>
+                    </div>
+                  </article>
+                ))}
+              </div>
+              <div className="mt-4 flex flex-wrap items-center justify-center gap-2">
+                {sampleVideos.slice(4).map((video) => (
+                  <a key={video.title} href={video.src} target="_blank" rel="noreferrer" className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-2 text-xs font-semibold text-[#efe2c8]/86 transition hover:border-[#d9b86c]/45 hover:text-[#e8f5ef]">
+                    {video.title}
+                  </a>
+                ))}
+              </div>
+            </div>
           </div>
         </section>
 
@@ -804,46 +828,6 @@ export default function Home() {
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
-          </div>
-        </section>
-
-        <section className="relative overflow-hidden py-16 md:py-22">
-          <div className="absolute inset-0 opacity-10" style={{ backgroundImage: `url(${patternImage})`, backgroundSize: "620px", backgroundPosition: "center" }} />
-          <div className="container relative z-10">
-            <SectionTitle
-              title="뮤지컬 샘플영상 보기"
-              description=""
-              align="center"
-              compact
-            />
-            <div className="mt-10 grid gap-3 sm:gap-4 md:grid-cols-2 xl:grid-cols-4">
-              {sampleVideos.slice(0, 4).map((video) => (
-                <article key={video.title} className="overflow-hidden rounded-[1.15rem] border border-[#d9b86c]/14 bg-[#120f0b] shadow-xl shadow-black/18 sm:rounded-[1.45rem]">
-                  <AspectRatio ratio={16 / 9}>
-                    <NaverThumbnail src={video.src} title={video.title} />
-                  </AspectRatio>
-                  <div className="p-3.5">
-                    <p className="text-[0.65rem] font-bold tracking-[0.18em] text-[#9ed4c0]">REPRESENTATIVE SAMPLE</p>
-                    <h3 className="mt-1.5 truncate font-serif-kr text-base font-semibold text-[#fff4d8]">{video.title}</h3>
-                  </div>
-                </article>
-              ))}
-            </div>
-            <div className="mt-5 rounded-[1.5rem] border border-[#d9b86c]/16 bg-[#0f0b08]/55 p-4">
-              <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
-                <div>
-                  <p className="text-xs font-bold tracking-[0.18em] text-[#9ed4c0]">MORE SAMPLE</p>
-                  <p className="mt-1 text-sm leading-6 text-[#d7ccb4]/74">추가 샘플은 제목을 눌러 확인하실 수 있습니다.</p>
-                </div>
-                <div className="flex flex-wrap gap-2">
-                  {sampleVideos.slice(4).map((video) => (
-                    <a key={video.title} href={video.src} target="_blank" rel="noreferrer" className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-2 text-xs font-semibold text-[#efe2c8]/86 transition hover:border-[#d9b86c]/45 hover:text-[#e8f5ef]">
-                      {video.title}
-                    </a>
-                  ))}
-                </div>
-              </div>
-            </div>
           </div>
         </section>
 
