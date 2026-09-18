@@ -314,8 +314,8 @@ function NaverThumbnail({ src, title }: { src: string; title: string }) {
         <img src={thumb} alt={title} className="h-full w-full object-cover" onError={() => setPlaying(true)} />
       </div>
       <div className="absolute inset-0 bg-black/30 transition group-hover:bg-black/20" />
-      <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex h-12 w-12 items-center justify-center rounded-full bg-red-600 shadow-lg transition group-hover:scale-110">
-        <svg className="h-5 w-5 translate-x-0.5 text-white" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+      <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex h-14 w-14 items-center justify-center rounded-full bg-red-600 shadow-lg transition group-hover:scale-110 sm:h-12 sm:w-12">
+        <svg className="h-6 w-6 translate-x-0.5 text-white sm:h-5 sm:w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
       </span>
     </button>
   );
@@ -651,10 +651,10 @@ export default function Home() {
 
             <div className="mt-10 border-t border-[#d9b86c]/12 pt-8">
               <p className="section-kicker text-center">Musical Sample</p>
-              <h3 className="mt-3 text-center font-serif-kr text-xl font-semibold text-[#fff4d8] md:text-2xl">뮤지컬 샘플영상 보기</h3>
-              <div className="mt-6 grid grid-cols-2 gap-2.5 sm:gap-3 lg:grid-cols-4">
+              <h3 className="mt-3 text-center font-serif-kr text-xl font-semibold text-[#fff4d8] md:text-2xl">뮤지컬 샘플영상 더 보기</h3>
+              <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-3 lg:grid-cols-4">
                 {sampleVideos.slice(0, 4).map((video) => (
-                  <article key={video.title} className="overflow-hidden rounded-[0.95rem] border border-[#d9b86c]/14 bg-[#120f0b] shadow-lg shadow-black/18 sm:rounded-[1.25rem]">
+                  <article key={video.title} className="overflow-hidden rounded-[1.1rem] border border-[#d9b86c]/14 bg-[#120f0b] shadow-lg shadow-black/18 sm:rounded-[1.25rem]">
                     <AspectRatio ratio={16 / 9}>
                       <NaverThumbnail src={video.src} title={video.title} />
                     </AspectRatio>
