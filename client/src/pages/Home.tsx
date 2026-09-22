@@ -518,9 +518,8 @@ export default function Home() {
                 <span className="whitespace-nowrap">신랑신부가 주인공이 되는 프리미엄 뮤지컬웨딩</span>
               </div>
               <h1 className="mt-6 font-serif-kr text-[1.75rem] font-semibold leading-[1.15] tracking-[-0.045em] text-[#fff8e7] min-[360px]:text-3xl sm:text-4xl md:text-7xl xl:text-8xl">
-                결혼식이{" "}
-                <span className="block gold-text">한 편의 영화처럼</span>
-                {" "}오래 기억되는 순간
+                무대가 열리면,{" "}
+                <span className="block gold-text">결혼식이 달라집니다</span>
               </h1>
               <p className="mx-auto mt-5 max-w-2xl whitespace-nowrap text-[0.8rem] leading-7 text-[#e8dcc1]/84 min-[360px]:text-sm sm:whitespace-normal sm:text-lg sm:leading-9 md:text-xl">
                 이너스뮤직은 예식을 <strong className="text-[#fff4d8]">하나의 영화 장면</strong>처럼 완성합니다.
