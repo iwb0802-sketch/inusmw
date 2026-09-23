@@ -522,7 +522,7 @@ export default function Home() {
                 <span className="block gold-text">한 편의 공연이 됩니다</span>
               </h1>
               <p className="mx-auto mt-5 max-w-2xl whitespace-nowrap text-[0.8rem] leading-7 text-[#e8dcc1]/84 min-[360px]:text-sm sm:whitespace-normal sm:text-lg sm:leading-9 md:text-xl">
-                이너스뮤직은 예식을 <strong className="text-[#fff4d8]">하나의 영화 장면</strong>처럼 완성합니다.
+                이너스뮤직은 예식을 <strong className="text-[#fff4d8]">하나의 무대</strong>처럼 완성합니다.
               </p>
               <div className="mt-7 flex w-full max-w-md flex-col items-center justify-center gap-3 sm:mt-10 sm:max-w-none sm:flex-row sm:gap-4">
                 <ConsultationButton>카카오톡 상담요청하기</ConsultationButton>
