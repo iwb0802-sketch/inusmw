@@ -53,11 +53,14 @@ const navItems = [
 ];
 
 const serviceDropdownItems = [
+  { label: "메인홈페이지", href: "https://www.inusmusic.com/" },
   { label: "결혼식사회", href: "https://inusmc.co.kr" },
   { label: "클래식연주", href: "https://www.inusclassic.kr/" },
   { label: "재즈연주", href: "https://inusjazz.kr/" },
   { label: "축가", href: "https://inusmusic.kr/" },
   { label: "모바일청첩장", href: "https://inuscard.com" },
+  { label: "음원편집", href: "https://www.inusmusic.com/audio", isNew: true },
+  { label: "식전영상제작", href: "https://prewedding-video-renderer-production.up.railway.app/editor", isNew: true },
   { label: "완성패키지", href: "https://blog.naver.com/inusmusics/220652965646" },
 ];
 
@@ -450,9 +453,10 @@ export default function Home() {
                       target="_blank"
                       rel="noreferrer"
                       onClick={() => setServiceDropdownOpen(false)}
-                      className="block px-4 py-2.5 text-sm text-[#d7ccb4]/80 transition hover:bg-[#d9b86c]/10 hover:text-[#9ed4c0]"
+                      className="flex items-center gap-1.5 px-4 py-2.5 text-sm text-[#d7ccb4]/80 transition hover:bg-[#d9b86c]/10 hover:text-[#9ed4c0]"
                     >
                       {item.label}
+                      {item.isNew ? <span className="rounded-full bg-[#d9b86c]/20 px-1.5 py-0.5 text-[0.6rem] font-bold tracking-[0.05em] text-[#d9b86c]">NEW</span> : null}
                     </a>
                   ))}
                 </div>
@@ -492,9 +496,10 @@ export default function Home() {
                     target="_blank"
                     rel="noreferrer"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="rounded-full border border-[#d9b86c]/18 bg-[#100c08]/88 px-3 py-3 text-center font-serif-kr text-sm font-semibold text-[#9ed4c0]/80 transition hover:border-[#d9b86c]/45 hover:bg-[#d9b86c]/10 hover:text-[#e8f5ef]"
+                    className="relative rounded-full border border-[#d9b86c]/18 bg-[#100c08]/88 px-3 py-3 text-center font-serif-kr text-sm font-semibold text-[#9ed4c0]/80 transition hover:border-[#d9b86c]/45 hover:bg-[#d9b86c]/10 hover:text-[#e8f5ef]"
                   >
                     {item.label}
+                    {item.isNew ? <span className="absolute -right-1 -top-1 rounded-full bg-[#d9b86c] px-1.5 py-0.5 text-[0.55rem] font-bold text-[#0d0a07]">NEW</span> : null}
                   </a>
                 ))}
               </nav>
