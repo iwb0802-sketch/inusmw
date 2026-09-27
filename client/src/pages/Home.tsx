@@ -265,12 +265,15 @@ const quickLinks = [
 ];
 
 const additionalOptionServices = [
-  { title: "완성패키지", subtitle: "Complete Package", body: "예식 음악과 진행 옵션을 한 번에 구성하고 싶을 때 확인하는 완성형 패키지입니다.", href: "https://blog.naver.com/inusmusics/220652965646" },
+  { title: "메인홈페이지", subtitle: "Main Site", body: "이너스뮤직의 모든 서비스를 한 곳에서 확인할 수 있는 메인 홈페이지입니다.", href: "https://www.inusmusic.com/" },
+  { title: "결혼식사회", subtitle: "Wedding MC", body: "예식 흐름과 이벤트 큐를 안정적으로 이끄는 전문 사회자 옵션입니다.", href: "https://inusmc.co.kr" },
   { title: "클래식연주", subtitle: "Ceremony Classic", body: "현악·클래식 무드로 예식의 격식을 더하는 옵션입니다.", href: "https://inusclassic.kr/" },
   { title: "재즈연주", subtitle: "Live Jazz", body: "리셉션과 식전 분위기를 부드럽게 만드는 라이브 재즈 구성입니다.", href: "https://inusjazz.kr/" },
-  { title: "모바일청첩장", subtitle: "Mobile Invitation", body: "이너스뮤직이 만드는 감성 모바일 청첩장. 20만원 이상 예약 고객 무료 제작 지원.", href: "https://inuscard.com" },
-  { title: "사회자", subtitle: "Professional MC", body: "예식 흐름과 이벤트 큐를 안정적으로 이끄는 전문 사회자 옵션입니다.", href: "https://inusmc.co.kr" },
   { title: "축가", subtitle: "Wedding Song", body: "뮤지컬 외 일반 축가·맞춤 축가가 필요할 때 함께 상담 가능합니다.", href: "https://inusmusic.kr/" },
+  { title: "모바일청첩장", subtitle: "Mobile Invitation", body: "이너스뮤직이 만드는 감성 모바일 청첩장. 20만원 이상 예약 고객 무료 제작 지원.", href: "https://inuscard.com" },
+  { title: "음원편집", subtitle: "Audio Editing", body: "축가·행사에 사용할 음원을 원하는 구간과 톤으로 편집해 드리는 서비스입니다.", href: "https://www.inusmusic.com/audio", isNew: true },
+  { title: "식전영상제작", subtitle: "Pre-wedding Video", body: "예식 전 상영할 영상을 온라인 에디터로 손쉽게 제작할 수 있는 서비스입니다.", href: "https://prewedding-video-renderer-production.up.railway.app/editor", isNew: true },
+  { title: "완성패키지", subtitle: "Complete Package", body: "예식 음악과 진행 옵션을 한 번에 구성하고 싶을 때 확인하는 완성형 패키지입니다.", href: "https://blog.naver.com/inusmusics/220652965646" },
 ];
 
 const qna = [
@@ -1102,7 +1105,7 @@ export default function Home() {
                     <span className="break-keep font-serif-kr text-xl font-semibold leading-snug text-[#fff4d8] md:text-2xl">추가 옵션 서비스 보기</span>
                   </span>
                 </AccordionTrigger>
-                <p className="px-5 pb-5 text-sm leading-7 text-[#d7ccb4]/74">필요하신 경우 결혼식사회, 클래식연주, 재즈연주, 축가, 모바일청첩장, 완성패키지 옵션을 함께 확인하실 수 있습니다.</p>
+                <p className="px-5 pb-5 text-sm leading-7 text-[#d7ccb4]/74">필요하신 경우 메인홈페이지, 결혼식사회, 클래식연주, 재즈연주, 축가, 모바일청첩장, 음원편집, 식전영상제작, 완성패키지 옵션을 함께 확인하실 수 있습니다.</p>
                 <AccordionContent className="px-1 pb-3 md:px-2">
                   <div className="grid grid-cols-2 gap-2.5 sm:grid-cols-3 lg:grid-cols-6">
                     {additionalOptionServices.map((service, index) => (
@@ -1119,7 +1122,10 @@ export default function Home() {
                         </div>
                         <div>
                           <p className="text-[0.63rem] font-bold tracking-[0.14em] text-[#d9b86c]/72 sm:text-[0.68rem]">{service.subtitle}</p>
-                          <h3 className="mt-1.5 whitespace-nowrap font-serif-kr text-lg font-semibold tracking-[-0.04em] text-[#fff4d8] sm:text-xl">{service.title}</h3>
+                          <h3 className="mt-1.5 flex items-center gap-1.5 whitespace-nowrap font-serif-kr text-lg font-semibold tracking-[-0.04em] text-[#fff4d8] sm:text-xl">
+                            {service.title}
+                            {service.isNew ? <span className="rounded-full bg-[#d9b86c]/20 px-1.5 py-0.5 text-[0.55rem] font-bold tracking-[0.05em] text-[#d9b86c]">NEW</span> : null}
+                          </h3>
                         </div>
                       </a>
                     ))}
