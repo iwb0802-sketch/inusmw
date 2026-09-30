@@ -27,6 +27,7 @@ import {
   Music2,
   ShieldCheck,
   Sparkles,
+  Users,
   X,
 } from "lucide-react";
 
@@ -943,7 +944,13 @@ export default function Home() {
                 <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
                   <div>
                     <p className="section-kicker">Musical Cast</p>
-                    <h3 className="mt-3 font-serif-kr text-2xl font-semibold text-[#fff4d8] md:text-3xl">배우 프로필 목록</h3>
+                    <div className="mt-3 flex flex-wrap items-center gap-2.5">
+                      <h3 className="font-serif-kr text-2xl font-semibold text-[#fff4d8] md:text-3xl">배우 프로필 목록</h3>
+                      <span className="inline-flex items-center gap-1.5 rounded-full border border-[#d9b86c]/32 bg-[#d9b86c]/10 px-3 py-1 text-xs font-bold tracking-[0.02em] text-[#d9b86c]">
+                        <Users className="h-3.5 w-3.5" />
+                        27인 총 출연진 풀 확보
+                      </span>
+                    </div>
                   </div>
                   <button
                     type="button"
@@ -956,26 +963,34 @@ export default function Home() {
                   </button>
                 </div>
                 {castProfilesOpen ? (
-                  <div className="mt-7 grid grid-cols-2 items-stretch gap-3 sm:gap-4 md:grid-cols-3">
-                    {actorCastProfiles.map((actor) => (
-                      <article key={actor.name} className="group flex h-full flex-col rounded-[1.65rem] border border-[#d9b86c]/14 bg-[#0d0a07] p-2.5 text-center shadow-[0_18px_46px_rgba(0,0,0,0.22)] transition duration-500 hover:-translate-y-1 hover:border-[#d9b86c]/42 hover:bg-[#130f0b] sm:p-3">
-                        <div className="relative aspect-[4/5] overflow-hidden rounded-[1.32rem] border border-[#d9b86c]/30 bg-[#050705] shadow-[inset_0_0_0_1px_rgba(255,255,255,0.05),0_20px_34px_rgba(0,0,0,0.28)]">
-                          <img
-                            src={actor.image}
-                            alt={`${actor.name} ${actor.role} 프로필 사진`}
-                            className="h-full w-full object-cover object-center transition duration-700 group-hover:scale-[1.012]"
-                          />
-                        </div>
-                        <div className="flex flex-1 flex-col justify-between pt-4">
-                          <div>
-                            <h4 className="font-serif-kr text-xl font-semibold leading-tight text-[#fff4d8] sm:text-2xl">{actor.name}</h4>
-                            <p className="mt-1 text-sm font-medium text-[#9ed4c0]">{actor.role}</p>
+                  <>
+                    <div className="mt-7 grid grid-cols-2 items-stretch gap-3 sm:gap-4 md:grid-cols-3">
+                      {actorCastProfiles.map((actor) => (
+                        <article key={actor.name} className="group flex h-full flex-col rounded-[1.65rem] border border-[#d9b86c]/14 bg-[#0d0a07] p-2.5 text-center shadow-[0_18px_46px_rgba(0,0,0,0.22)] transition duration-500 hover:-translate-y-1 hover:border-[#d9b86c]/42 hover:bg-[#130f0b] sm:p-3">
+                          <div className="relative aspect-[4/5] overflow-hidden rounded-[1.32rem] border border-[#d9b86c]/30 bg-[#050705] shadow-[inset_0_0_0_1px_rgba(255,255,255,0.05),0_20px_34px_rgba(0,0,0,0.28)]">
+                            <img
+                              src={actor.image}
+                              alt={`${actor.name} ${actor.role} 프로필 사진`}
+                              className="h-full w-full object-cover object-center transition duration-700 group-hover:scale-[1.012]"
+                            />
                           </div>
-                          <div className="mt-4 h-px w-full bg-[linear-gradient(90deg,transparent,rgba(217,184,108,0.22),transparent)]" />
-                        </div>
-                      </article>
-                    ))}
-                  </div>
+                          <div className="flex flex-1 flex-col justify-between pt-4">
+                            <div>
+                              <h4 className="font-serif-kr text-xl font-semibold leading-tight text-[#fff4d8] sm:text-2xl">{actor.name}</h4>
+                              <p className="mt-1 text-sm font-medium text-[#9ed4c0]">{actor.role}</p>
+                            </div>
+                            <div className="mt-4 h-px w-full bg-[linear-gradient(90deg,transparent,rgba(217,184,108,0.22),transparent)]" />
+                          </div>
+                        </article>
+                      ))}
+                    </div>
+                    <div className="mt-6 rounded-[1.4rem] border border-[#d9b86c]/16 bg-[#120f0b]/70 p-5 text-center sm:p-6">
+                      <p className="text-sm leading-7 text-[#d7ccb4]/82 sm:text-base sm:leading-8">
+                        공개된 프로필 외에도 검증된 배우 <span className="font-semibold text-[#9ed4c0]">20인</span>이 더 있습니다.<br className="hidden sm:block" />
+                        예식 분위기와 일정에 맞춰 가장 어울리는 배우를 이너스뮤직이 직접 큐레이션해 배정합니다.
+                      </p>
+                    </div>
+                  </>
                 ) : null}
               </div>
             </div>
