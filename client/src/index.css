@@ -369,3 +369,8 @@
     box-shadow: 0 12px 30px rgba(0,0,0,0.3), 0 0 36px rgba(217,184,108,0.40);
   }
 }
+
+/* 서비스 페이지(.svc-page) 공통: 한글 줄바꿈(단어 단위)·숫자 모양 통일. 다른 페이지에는 영향 없음 */
+.svc-page { word-break: keep-all; overflow-wrap: break-word; font-variant-numeric: lining-nums; font-feature-settings: "lnum" 1; }
+.svc-page p, .svc-page li, .svc-page dd, .svc-page blockquote { text-wrap: pretty; }
+.svc-page h1, .svc-page h2, .svc-page h3, .svc-page h4 { text-wrap: balance; }

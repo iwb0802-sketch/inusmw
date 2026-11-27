@@ -10,6 +10,8 @@ import { Button } from "@/components/ui/button";
 import InusCardPopup from "@/components/InusCardPopup";
 import FloatingButtons from "@/components/FloatingButtons";
 import QuickNav from "@/components/musical/QuickNav";
+import HeroProof from "@/components/brand/HeroProof";
+import ServiceCrossNav from "@/components/brand/ServiceCrossNav";
 import { useEffect, useRef, useState } from "react";
 import {
   Award,
@@ -249,7 +251,7 @@ const actorCastProfiles = [
 ];
 
 const benefitCards = [
-  { title: "숨고 리뷰 참여 혜택", body: "숨고에 상담 리뷰 작성시 최대 2만원 할인과 더불어 결혼준비에 필요한 체크리스트 자료를 드립니다." },
+  { title: "숨고 리뷰 참여 혜택", body: "숨고에 상담 리뷰 작성시 2만원 할인과 더불어 결혼준비에 필요한 체크리스트 자료를 드립니다." },
   { title: "블로그 홍보 추가 혜택", body: "블로그 홍보 참여 고객님께는 별도 추가 혜택을 드립니다.", actionLabel: "참여혜택 보기", actionUrl: eventBenefitUrl },
 ];
 
@@ -266,12 +268,7 @@ const quickLinks = [
 ];
 
 const additionalOptionServices = [
-  { title: "메인홈페이지", subtitle: "Main Site", body: "이너스뮤직의 모든 서비스를 한 곳에서 확인할 수 있는 메인 홈페이지입니다.", href: "https://www.inusmusic.com/" },
-  { title: "결혼식사회", subtitle: "Wedding MC", body: "예식 흐름과 이벤트 큐를 안정적으로 이끄는 전문 사회자 옵션입니다.", href: "https://inusmc.co.kr" },
-  { title: "클래식연주", subtitle: "Ceremony Classic", body: "현악·클래식 무드로 예식의 격식을 더하는 옵션입니다.", href: "https://inusclassic.kr/" },
-  { title: "재즈연주", subtitle: "Live Jazz", body: "리셉션과 식전 분위기를 부드럽게 만드는 라이브 재즈 구성입니다.", href: "https://inusjazz.kr/" },
-  { title: "축가", subtitle: "Wedding Song", body: "뮤지컬 외 일반 축가·맞춤 축가가 필요할 때 함께 상담 가능합니다.", href: "https://inusmusic.kr/" },
-  { title: "모바일청첩장", subtitle: "Mobile Invitation", body: "이너스뮤직이 만드는 감성 모바일 청첩장. 20만원 이상 예약 고객 무료 제작 지원.", href: "https://inuscard.com" },
+  { title: "모바일청첩장", subtitle: "Mobile Invitation", body: "이너스뮤직이 만드는 감성 모바일 청첩장. 20만원 이상 예약 고객께 제작을 지원해 드립니다.", href: "https://inuscard.com" },
   { title: "음원편집", subtitle: "Audio Editing", body: "축가·행사에 사용할 음원을 원하는 구간과 톤으로 편집해 드리는 서비스입니다.", href: "https://www.inusmusic.com/audio", isNew: true },
   { title: "식전영상제작", subtitle: "Pre-wedding Video", body: "예식 전 상영할 영상을 온라인 에디터로 손쉽게 제작할 수 있는 서비스입니다.", href: "https://prewedding-video-renderer-production.up.railway.app/editor", isNew: true },
   { title: "완성패키지", subtitle: "Complete Package", body: "예식 음악과 진행 옵션을 한 번에 구성하고 싶을 때 확인하는 완성형 패키지입니다.", href: "https://blog.naver.com/inusmusics/220652965646" },
@@ -422,7 +419,7 @@ export default function Home() {
   const [castProfilesOpen, setCastProfilesOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-[#090806] text-[#f8edd4]">
+    <div className="svc-page min-h-screen bg-[#090806] text-[#f8edd4]">
       <InusCardPopup />
       <header className="fixed inset-x-0 top-0 z-50 border-b border-[#d9b86c]/10 bg-[#090806]/80 backdrop-blur-xl">
         <div className="container relative flex h-[4.75rem] items-center justify-between py-4 pr-24 lg:pr-0">
@@ -521,12 +518,12 @@ export default function Home() {
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,rgba(217,184,108,0.10),transparent_50%),radial-gradient(circle_at_50%_20%,rgba(217,184,108,0.12),transparent_40%)]" />
           </div>
 
-          <div className="container relative z-10 flex min-h-[calc(100svh-6rem)] flex-col items-center justify-center gap-8 px-5 py-16 text-center sm:gap-12 sm:py-20">
+          <div className="container relative z-10 flex min-h-[calc(100svh-6rem)] flex-col items-center justify-center gap-8 px-5 py-14 text-center sm:gap-8 sm:py-8">
             <div className="animate-rise-in max-w-4xl">
               <div className="mx-auto inline-flex max-w-full items-center gap-2 rounded-full border border-[#d9b86c]/35 bg-[#0f0b08]/50 px-3 py-2 text-[11px] font-semibold tracking-[-0.03em] text-[#e8f5ef] backdrop-blur min-[360px]:text-xs sm:gap-3 sm:px-4 sm:text-sm">
                 <span className="whitespace-nowrap">신랑신부가 주인공이 되는 프리미엄 뮤지컬웨딩</span>
               </div>
-              <h1 className="mt-6 font-serif-kr text-[1.75rem] font-semibold leading-[1.15] tracking-[-0.045em] text-[#fff8e7] min-[360px]:text-3xl sm:text-4xl md:text-7xl xl:text-8xl">
+              <h1 className="mt-6 font-serif-kr text-[1.75rem] font-semibold leading-[1.15] tracking-[-0.045em] text-[#fff8e7] min-[360px]:text-3xl sm:text-4xl md:text-7xl xl:text-[4.75rem]">
                 결혼식이,{" "}
                 <span className="block gold-text">한 편의 공연이 됩니다</span>
               </h1>
@@ -534,17 +531,16 @@ export default function Home() {
                 <span className="block sm:inline">이너스뮤직은 노래와 안무, 진행까지</span>{" "}
                 <span className="block sm:inline">하나의 완성된 서사로 예식을 만듭니다.</span>
               </p>
-              <div className="mt-7 flex w-full max-w-md flex-col items-center justify-center gap-3 sm:mt-10 sm:max-w-none sm:flex-row sm:gap-4">
+              <div className="mt-7 flex w-full max-w-md flex-col items-center justify-center gap-3 sm:mt-8 sm:max-w-none sm:flex-row sm:gap-4">
                 <ConsultationButton>카카오톡 상담요청하기</ConsultationButton>
                 <Button asChild size="lg" className="w-full rounded-lg border border-[#d9b86c] bg-transparent px-5 py-4 text-sm font-bold text-white transition hover:bg-[#d9b86c]/10 hover:text-white sm:w-auto sm:px-7 sm:py-6 sm:text-base">
                   <a href="#details">자세한 내용 보기</a>
                 </Button>
               </div>
+              <HeroProof pricingHref="#pricing" className="mt-6 sm:mt-8" />
             </div>
-
-
           </div>
-          <a href="#details" className="absolute bottom-7 left-1/2 z-20 flex -translate-x-1/2 flex-col items-center gap-3 text-[0.66rem] font-bold uppercase tracking-[0.26em] text-[#d9b86c]/75 transition hover:text-[#d9b86c]" aria-label="아래 내용으로 스크롤">
+          <a href="#details" className="absolute bottom-7 left-1/2 z-20 hidden -translate-x-1/2 flex-col items-center gap-3 text-[0.66rem] font-bold uppercase tracking-[0.26em] text-[#d9b86c]/75 transition hover:text-[#d9b86c]" aria-label="아래 내용으로 스크롤">
             <span>Scroll</span>
             <span className="relative h-11 w-px overflow-hidden bg-[#d9b86c]/25 after:absolute after:left-0 after:top-0 after:h-5 after:w-px after:animate-[scrollCue_1.8s_ease-in-out_infinite] after:bg-[#d9b86c]" />
           </a>
@@ -1120,9 +1116,9 @@ export default function Home() {
                     <span className="break-keep font-serif-kr text-xl font-semibold leading-snug text-[#fff4d8] md:text-2xl">추가 옵션 서비스 보기</span>
                   </span>
                 </AccordionTrigger>
-                <p className="px-5 pb-5 text-sm leading-7 text-[#d7ccb4]/74">필요하신 경우 메인홈페이지, 결혼식사회, 클래식연주, 재즈연주, 축가, 모바일청첩장, 음원편집, 식전영상제작, 완성패키지 옵션을 함께 확인하실 수 있습니다.</p>
+                <p className="px-5 pb-5 text-sm leading-7 text-[#d7ccb4]/74">모바일청첩장, 음원편집, 식전영상제작, 완성패키지 옵션을 함께 확인하실 수 있습니다.</p>
                 <AccordionContent className="px-1 pb-3 md:px-2">
-                  <div className="grid grid-cols-2 gap-2.5 sm:grid-cols-3 lg:grid-cols-6">
+                  <div className="grid grid-cols-2 gap-2.5 sm:grid-cols-3 lg:grid-cols-4">
                     {additionalOptionServices.map((service, index) => (
                       <a
                         key={service.title}
@@ -1180,20 +1176,21 @@ export default function Home() {
           </div>
         </section>
 
+        <ServiceCrossNav current="musical" background="#0d0a07" />
+
         <FloatingButtons />
         <QuickNav />
       </main>
 
-      <footer className="border-t border-[#d9b86c]/10 bg-[#070604] py-10">
-        <div className="container flex flex-col gap-5 text-sm text-[#d7ccb4]/62">
-          <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
-            <p className="font-display tracking-[0.22em] text-[#fff4d8]">INUS MUSIC · MUSICAL WEDDING</p>
-            <p>프리미엄 뮤지컬웨딩 연출 · 상담 후 예식 조건에 맞춰 세부 구성이 확정됩니다.</p>
-          </div>
-          <div className="border-t border-[#d9b86c]/8 pt-5 text-xs leading-6 text-[#d7ccb4]/50">
+      <footer className="border-t border-[#d9b86c]/10 bg-[#070604] py-12">
+        <div className="container flex flex-col items-center gap-3 text-center text-xs leading-6 text-[#d7ccb4]/55">
+          <p className="font-display text-sm tracking-[0.28em] text-[#fff4d8]">INUSMUSIC</p>
+          <p className="text-[0.62rem] uppercase tracking-[0.3em] text-[#d9b86c]/70">Premium Musical Wedding</p>
+          <div className="mt-3">
             <p>대표자: 신유진 | 사업자번호: 299-90-00178</p>
             <p>사무실 주소: 서울 광진구 자양로 165 4층 | TEL: 02-423-2772</p>
           </div>
+          <p className="mt-2 text-[#d7ccb4]/40">&copy; 2015-2026 INUSMUSIC. All rights reserved.</p>
         </div>
       </footer>
     </div>
