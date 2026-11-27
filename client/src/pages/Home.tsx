@@ -41,7 +41,7 @@ const patternImage =
   "/images/inus_mint_gold_music_pattern.webp";
 
 const kakaoChatUrl = "https://pf.kakao.com/_wxovaM/chat";
-const packageUrl = "https://blog.naver.com/inusmusics/220652965646";
+const packageUrl = "https://www.inusmusic.com/package";
 const reviewUrl = "http://musicin.godohosting.com/bbs/board.php?bo_table=forum";
 const musicalSongUrl = "https://blog.naver.com/inusmusics/223839441679";
 const eventBenefitUrl = "https://blog.naver.com/inusmusics/220652958346";
@@ -64,7 +64,7 @@ const serviceDropdownItems = [
   { label: "모바일청첩장", href: "https://inuscard.com" },
   { label: "음원편집", href: "https://www.inusmusic.com/audio", isNew: true },
   { label: "식전영상제작", href: "https://prewedding-video-renderer-production.up.railway.app/editor", isNew: true },
-  { label: "완성패키지", href: "https://blog.naver.com/inusmusics/220652965646" },
+  { label: "완성패키지", href: "https://www.inusmusic.com/package" },
 ];
 
 const trustPoints = [
@@ -271,7 +271,7 @@ const additionalOptionServices = [
   { title: "모바일청첩장", subtitle: "Mobile Invitation", body: "이너스뮤직이 만드는 감성 모바일 청첩장. 20만원 이상 예약 고객께 제작을 지원해 드립니다.", href: "https://inuscard.com" },
   { title: "음원편집", subtitle: "Audio Editing", body: "축가·행사에 사용할 음원을 원하는 구간과 톤으로 편집해 드리는 서비스입니다.", href: "https://www.inusmusic.com/audio", isNew: true },
   { title: "식전영상제작", subtitle: "Pre-wedding Video", body: "예식 전 상영할 영상을 온라인 에디터로 손쉽게 제작할 수 있는 서비스입니다.", href: "https://prewedding-video-renderer-production.up.railway.app/editor", isNew: true },
-  { title: "완성패키지", subtitle: "Complete Package", body: "예식 음악과 진행 옵션을 한 번에 구성하고 싶을 때 확인하는 완성형 패키지입니다.", href: "https://blog.naver.com/inusmusics/220652965646" },
+  { title: "완성패키지", subtitle: "Complete Package", body: "예식 음악과 진행 옵션을 한 번에 구성하고 싶을 때 확인하는 완성형 패키지입니다.", href: "https://www.inusmusic.com/package" },
 ];
 
 const qna = [
