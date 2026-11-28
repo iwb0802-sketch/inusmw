@@ -18,7 +18,6 @@ import {
   CheckCircle2,
   ChevronRight,
   Crown,
-  ExternalLink,
   FileCheck2,
   Gift,
   HeartHandshake,
@@ -265,13 +264,6 @@ const quickLinks = [
   ["더 많은 영상보기", videoArchiveUrl],
   ["후기글 보기", "https://blog.naver.com/inusmusics/223023835728"],
   ["이너스 예약현황", "https://www.inusmc.co.kr/weekend-performance"],
-];
-
-const additionalOptionServices = [
-  { title: "모바일청첩장", subtitle: "Mobile Invitation", body: "이너스뮤직이 만드는 감성 모바일 청첩장. 20만원 이상 예약 고객께 제작을 지원해 드립니다.", href: "https://inuscard.com" },
-  { title: "음원편집", subtitle: "Audio Editing", body: "축가·행사에 사용할 음원을 원하는 구간과 톤으로 편집해 드리는 서비스입니다.", href: "https://www.inusmusic.com/audio", isNew: true },
-  { title: "식전영상제작", subtitle: "Pre-wedding Video", body: "예식 전 상영할 영상을 온라인 에디터로 손쉽게 제작할 수 있는 서비스입니다.", href: "https://prewedding-video-renderer-production.up.railway.app/editor", isNew: true },
-  { title: "완성패키지", subtitle: "Complete Package", body: "예식 음악과 진행 옵션을 한 번에 구성하고 싶을 때 확인하는 완성형 패키지입니다.", href: "https://www.inusmusic.com/package" },
 ];
 
 const qna = [
@@ -1095,54 +1087,6 @@ export default function Home() {
                   </AccordionContent>
                 </AccordionItem>
               ))}
-            </Accordion>
-          </div>
-        </section>
-
-        <section id="services" className="relative overflow-hidden border-y border-[#d9b86c]/10 bg-[#0d0a07] py-20 md:py-28">
-          <div className="absolute inset-0 opacity-10" style={{ backgroundImage: `url(${patternImage})`, backgroundSize: "620px", backgroundPosition: "center" }} />
-          <div className="container relative z-10">
-            <SectionTitle
-              title="추가 옵션 서비스"
-              description=""
-              align="center"
-              compact
-            />
-            <Accordion type="single" collapsible className="mx-auto mt-10 max-w-5xl rounded-[1.4rem] border border-[#d9b86c]/18 bg-[#0d0a07] p-2.5 sm:rounded-[2.2rem] sm:p-4 md:p-5">
-              <AccordionItem value="additional-services" className="border-b-0">
-                <AccordionTrigger className="rounded-[1.65rem] px-5 py-5 text-left hover:no-underline">
-                  <span className="flex min-w-0 flex-col gap-2">
-                    <span className="text-xs font-bold uppercase tracking-[0.24em] text-[#9ed4c0]">Option Line-up</span>
-                    <span className="break-keep font-serif-kr text-xl font-semibold leading-snug text-[#fff4d8] md:text-2xl">추가 옵션 서비스 보기</span>
-                  </span>
-                </AccordionTrigger>
-                <p className="px-5 pb-5 text-sm leading-7 text-[#d7ccb4]/74">모바일청첩장, 음원편집, 식전영상제작, 완성패키지 옵션을 함께 확인하실 수 있습니다.</p>
-                <AccordionContent className="px-1 pb-3 md:px-2">
-                  <div className="grid grid-cols-2 gap-2.5 sm:grid-cols-3 lg:grid-cols-4">
-                    {additionalOptionServices.map((service, index) => (
-                      <a
-                        key={service.title}
-                        href={service.href}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="group flex min-h-[6.8rem] flex-col justify-between rounded-[1.25rem] border border-[#d9b86c]/15 bg-[#0d0a07] p-3.5 transition duration-500 hover:-translate-y-0.5 hover:border-[#d9b86c]/45 hover:bg-[#130f0b] sm:p-4"
-                      >
-                        <div className="flex items-center justify-between gap-2">
-                          <span className="font-display text-[0.68rem] font-bold tracking-[0.18em] text-[#9ed4c0]">0{index + 1}</span>
-                          <ExternalLink className="h-3.5 w-3.5 text-[#d9b86c]/70 transition group-hover:text-[#9ed4c0]" />
-                        </div>
-                        <div>
-                          <p className="text-[0.63rem] font-bold tracking-[0.14em] text-[#d9b86c]/72 sm:text-[0.68rem]">{service.subtitle}</p>
-                          <h3 className="mt-1.5 flex items-center gap-1.5 whitespace-nowrap font-serif-kr text-lg font-semibold tracking-[-0.04em] text-[#fff4d8] sm:text-xl">
-                            {service.title}
-                            {service.isNew ? <span className="rounded-full bg-[#d9b86c]/20 px-1.5 py-0.5 text-[0.55rem] font-bold tracking-[0.05em] text-[#d9b86c]">NEW</span> : null}
-                          </h3>
-                        </div>
-                      </a>
-                    ))}
-                  </div>
-                </AccordionContent>
-              </AccordionItem>
             </Accordion>
           </div>
         </section>
